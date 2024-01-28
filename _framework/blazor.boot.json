@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Angor.Website",
   "resources": {
-    "hash": "sha256-mkHULAje0gjYuf+2hvnJz+s6woOclxvx8D6GHWOFNFk=",
+    "hash": "sha256-IDvq92ZJbQ+2QzQLzXL9dlGpkkrNLBTa8pnX9FQ75qU=",
     "jsModuleNative": {
       "dotnet.native.8.0.1.ahpp78valh.js": "sha256-SGOlISx+3G4kkvpC9Uq3qoPGsnjxGmW61QBev0lyI5U="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "Angor.Website.wasm": "sha256-SS5QlQX4YQRb8Bgb3RpWfJ2lA2teiZVWP1oa+ZEqTs4=",
+      "Angor.Website.wasm": "sha256-rblkXJBKXePCPKneaq0FdCR5LpK5TB0kZ+rc/ZTO4cA=",
       "BlazorAnimate.wasm": "sha256-rwFvQE7EmQQRmAK0NmiigoQvxYT6a6KaBWPYzSV4+Jk=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-YjQYcL5BBXZFVbMZ1g2tNZuI8Q1J1EFZAhmuxMhzlrI=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-mmo6S4AxiBcnKbs4b+7ObftqPCkIcLGiAv9gICT/5NY=",
@@ -45,7 +45,7 @@
       "System.Private.CoreLib.wasm": "sha256-k6bD7gP6q9/SsUTVEXkU98Hnny4YhqrvNGHClNUGAqI=",
       "System.Private.Uri.wasm": "sha256-jj/hhbT4udfK7GNUIuvm7tP2oTvg+gtQawFcLyzQh0c=",
       "System.Runtime.InteropServices.JavaScript.wasm": "sha256-RlJHXOPlWUlCQa08xhe0wthBRBE4nBiAsyC88n/fChE=",
-      "System.Runtime.wasm": "sha256-/hqkM2TNVoMBo0hKaXo/iTpiLmRbhQ0YapBaDlWX2QM=",
+      "System.Runtime.wasm": "sha256-F/JpgYoUabX6qGqNkglGblHgeAPzI+C7QBekwCsCy2Q=",
       "System.Text.Encodings.Web.wasm": "sha256-+xy+tOrpZQfQay41WvWhFxGHmHiYCwxIZC0u0YeG8MY=",
       "System.Text.Json.wasm": "sha256-1UMR1AS5xQplFWBFPk0uLBYzUKN1BHQqRuDsYxxquDo=",
       "System.Text.RegularExpressions.wasm": "sha256-gBOmDgKZBuDoGsHbhJq/ngBU9uslj8K/+ZuZekYrq54="
