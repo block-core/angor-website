@@ -17,7 +17,7 @@
       "url": "assets\/css\/fancybox.css"
     },
     {
-      "hash": "sha256-DMl+\/NYouKdmyyKJSgXNz8Px22LYCyNcUHjid3wXwDI=",
+      "hash": "sha256-FOxJ2yF8mmU9ynykuH0oLsAcgM84W0+2TMfQbkz3GsA=",
       "url": "assets\/css\/style.css"
     },
     {
@@ -397,11 +397,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-gwNGU4Doswjz8tGglWbjBUtdR4CHtKxr7Ods\/f3lwjg=",
+      "hash": "sha256-ImKeAfUFzsmhHK9KedLMXYlQJSNffB2fuTwOwDgc\/UA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-rblkXJBKXePCPKneaq0FdCR5LpK5TB0kZ+rc\/ZTO4cA=",
+      "hash": "sha256-LeWOt9QrgjwIDzOHugVqKMzvHUAUipn+OatZKTi3cXc=",
       "url": "_framework\/Angor.Website.wasm"
     },
     {
@@ -541,5 +541,5 @@
       "url": "_content\/BlazorAnimate\/blazorAnimateInterop.js"
     }
   ],
-  "version": "Lkj43Qh\/"
+  "version": "c7wg6u0+"
 };
