@@ -189,7 +189,7 @@
       "url": "assets\/js\/appUpdate.js"
     },
     {
-      "hash": "sha256-tdro77dZ1mHIhg8vAY7mjaiuVqBv2HeAJnCLJYq61kA=",
+      "hash": "sha256-M2rRm3JxhTfR2znGVua7K5IcaqiDWAjCN5h8T5HHtxo=",
       "url": "assets\/js\/custom.js"
     },
     {
@@ -217,7 +217,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-9bZxIrfcabSepvhSobi1\/owmndVL6TVWI09CpOfxFBM=",
+      "hash": "sha256-8eglwrk+YzGuwip0U+CAh\/Q3StkeXIJaHWKMwclX1nE=",
       "url": "index.html"
     },
     {
@@ -225,7 +225,7 @@
       "url": "manifest.webmanifest"
     },
     {
-      "hash": "sha256-5FL1Q0G\/UpwP42cJpTLnAumjcPY\/X\/l+jGqSoA8p3ZU=",
+      "hash": "sha256-ey43i2bgSFuR\/gj20OwNXJyj4nv\/KnziIs2gq2LAlaM=",
       "url": "ServiceWorkerRegister.js"
     },
     {
@@ -261,11 +261,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-3TERYnr1dy3CaBaVasvMMEUiZYP0jxDtyMOcb+FU8Jc=",
+      "hash": "sha256-RVtga5\/NN0Jr8W+ZbICWFmXs8VGyZDfZ5UE6FPQpX4k=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-Zd\/EJrHOe30FRJDXMf7uPGHD74Fv6AaLSGxrwlBVqeo=",
+      "hash": "sha256-reLi\/ZoMOKybAum4yoKtZBUVZMZHl\/i7wjHi6Vc4eV0=",
       "url": "_framework\/Angor.Website.wasm"
     },
     {
@@ -405,5 +405,5 @@
       "url": "_content\/BlazorAnimate\/blazorAnimateInterop.js"
     }
   ],
-  "version": "8JU0pPq+"
+  "version": "+KjoC7m+"
 };
