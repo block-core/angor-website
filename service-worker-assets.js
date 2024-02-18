@@ -185,7 +185,7 @@
       "url": "assets\/js\/apexcharts.js"
     },
     {
-      "hash": "sha256-HzwXdv6qE+m2Y+\/ydSZ9WA8RkfkrJvYqcYoX80\/wOKc=",
+      "hash": "sha256-djT1NNA5PtGqNTVtMrxpf5fvRFN8c4r7iY+GiTMjSpI=",
       "url": "assets\/js\/appUpdate.js"
     },
     {
@@ -261,11 +261,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-RVtga5\/NN0Jr8W+ZbICWFmXs8VGyZDfZ5UE6FPQpX4k=",
+      "hash": "sha256-wdN9lR3gP3sV9FkBcE3oaonoDvINCkr3AtoLfWVs3ck=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-reLi\/ZoMOKybAum4yoKtZBUVZMZHl\/i7wjHi6Vc4eV0=",
+      "hash": "sha256-1vH4F5nIe7hQgdj6Mtx4Is2RxJ1j0Em+oKbQVpEvCJM=",
       "url": "_framework\/Angor.Website.wasm"
     },
     {
@@ -405,5 +405,5 @@
       "url": "_content\/BlazorAnimate\/blazorAnimateInterop.js"
     }
   ],
-  "version": "+KjoC7m+"
+  "version": "WS3zDnSv"
 };
