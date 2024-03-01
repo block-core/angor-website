@@ -9,7 +9,7 @@
       "url": "assets\/css\/aos.css"
     },
     {
-      "hash": "sha256-IKtYrn\/qbycJqRuKUlEGMUeo45jmB03p75etoRiuMXQ=",
+      "hash": "sha256-CeFsMeMHJyj1cqg0qRMgBEeiZtImA0cJA0dbiOPJOEM=",
       "url": "assets\/css\/custom.css"
     },
     {
@@ -89,7 +89,7 @@
       "url": "assets\/images\/crypto.png"
     },
     {
-      "hash": "sha256-rPHNh3UCG66H6OdKYRzUaC4+5a42sUQfSO3xPPmxV7w=",
+      "hash": "sha256-1g8QYlt\/JkSpYDJ0560AaJjA7ULAbggHJ+Nkqgq7YDQ=",
       "url": "assets\/images\/discord-icon.svg"
     },
     {
@@ -123,6 +123,10 @@
     {
       "hash": "sha256-Po31gdTgGuMHxQOefmRP6X5nFRiXrRPSNZ6wKYc8Cs4=",
       "url": "assets\/images\/inner-page-hero-bg.png"
+    },
+    {
+      "hash": "sha256-GEkaXJW4aqH+wADyL+8U5iy5k6OFc71bVYWLCx\/k7OI=",
+      "url": "assets\/images\/instagram-icon.svg"
     },
     {
       "hash": "sha256-e\/NwSYfybo4+rAUNAvDMhJD2WHJuQGI6nq8qPDF8lE0=",
@@ -163,6 +167,10 @@
     {
       "hash": "sha256-Y5hvRqUDELyJxApZIdTlpHa0Zo7NJjvdAZkxF97amnc=",
       "url": "assets\/images\/team-bg.png"
+    },
+    {
+      "hash": "sha256-+yjv4HaBpj9jI\/IWdlwefkOPFe+WwGO\/9tUPK56ABFM=",
+      "url": "assets\/images\/telegram-icon.svg"
     },
     {
       "hash": "sha256-jGA6hWIyt8XKeGXiEB116swOQMR6lZkCpqwnLsuhb8Y=",
@@ -261,11 +269,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-x8s2ol0vE8PyyRkH5F\/vE\/zKgf5y9AJveNHONhZfW6M=",
+      "hash": "sha256-A2g67Be1exv0SniR5nZ6MoUi3pT9qcLskmyd3nKFZTs=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-iucv4DS7+UBlNZ4aZIU5vQlfdGt\/XLt5C7Vyh23tUJ0=",
+      "hash": "sha256-sLi4fOEeK2tPlEnoj8FEb7wwfXii9GAPvPbTbqnOMvw=",
       "url": "_framework\/Angor.Website.wasm"
     },
     {
@@ -405,5 +413,5 @@
       "url": "_content\/BlazorAnimate\/blazorAnimateInterop.js"
     }
   ],
-  "version": "enEaHz2A"
+  "version": "PLrJcRaN"
 };
