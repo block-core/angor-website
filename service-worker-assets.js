@@ -269,11 +269,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-SEgMiTnPyzfcVUz2xj0yq9XFMdpPTAcDNMeDUIMexrg=",
+      "hash": "sha256-HOcyTcL0l6GFeq9YonCIDrb30pB7Dtj2g4mDmyABvYM=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-C\/Og+QXiiXRz3\/voYGV81QQo+gaVnbYlutcJIlCCoNM=",
+      "hash": "sha256-w9XIsMvRC2xxx8azz7v\/\/XawOBuJ6NuifKpl019zwGk=",
       "url": "_framework\/Angor.Website.wasm"
     },
     {
@@ -413,5 +413,5 @@
       "url": "_content\/BlazorAnimate\/blazorAnimateInterop.js"
     }
   ],
-  "version": "W\/QChQ\/d"
+  "version": "WQgx0On7"
 };
