@@ -117,6 +117,10 @@
       "url": "assets\/images\/instagram-icon.svg"
     },
     {
+      "hash": "sha256-KHX9jouSE+ISyC7zPlBh+zjILlomP6QGwMbhtNuhNrA=",
+      "url": "assets\/images\/install-icon.svg"
+    },
+    {
       "hash": "sha256-9eUAm3v9yQ3WjYwT\/RLRscplJnsoTYiv2eMisxFcUzA=",
       "url": "assets\/images\/loading.svg"
     },
@@ -241,11 +245,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-fVBEyUNoRt+5xjxeXDgK7JpwY8jSQIf7AfsZ5YXmQvs=",
+      "hash": "sha256-amuNf7bod1yYW1\/WQUr9QnpR+T3CGXv5waX+O+y+RZQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-stbZDBbsTa2Uedx+khMHwfgFNh8t7V+cQK2Efp6Xr+M=",
+      "hash": "sha256-MAtzjlw29mjOiqSccC1OS0L9YEgesZueIzJHAU9OK9Y=",
       "url": "_framework\/Angor.Website.wasm"
     },
     {
@@ -385,5 +389,5 @@
       "url": "_content\/BlazorAnimate\/blazorAnimateInterop.js"
     }
   ],
-  "version": "y1s+7hJU"
+  "version": "Y2zeYRgl"
 };
