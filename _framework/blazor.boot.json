@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Angor.Website",
   "resources": {
-    "hash": "sha256-RsGxLUtAXFC8/AbIiLxwW97aBs8kLAxEeMpoCjv+Dgg=",
+    "hash": "sha256-L4keM58bezxTilCeB098ZLGIEpAxTj+WyzXrdqd5eGs=",
     "jsModuleNative": {
       "dotnet.native.8.0.4.6vlmefabfv.js": "sha256-ju0+XWE0ihz554eKEj0HQ8Opa61xpbUIaX5/MNo8we4="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "Angor.Website.wasm": "sha256-KhXwHJmZtZ4YHqbTABrc7+v12PPXPDWNTacSaOJJgWg=",
+      "Angor.Website.wasm": "sha256-pRUDis2L/gEyWcq2Ys/xiMOS5snUaeIFkRZaroVGqIw=",
       "BlazorAnimate.wasm": "sha256-rwFvQE7EmQQRmAK0NmiigoQvxYT6a6KaBWPYzSV4+Jk=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-z7vnugBHGgfRullhaK0qg+WBfyE8cr+oPCP2x9LlQRQ=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-DUvpzktySFpUWNVEp87C8FbAJYUD6qHu7a6hL+tBSl4=",
