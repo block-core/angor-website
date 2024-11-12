@@ -5,15 +5,6 @@ import "@fontsource/inter/600.css";
 import "@fontsource/inter/700.css";
 import "@fontsource/inter/800.css";
 import "@fontsource/inter/900.css";
-<<<<<<< HEAD
-import 'overlayscrollbars/overlayscrollbars.css';
-import { 
-  OverlayScrollbars, 
-  // ScrollbarsHidingPlugin, 
-  // SizeObserverPlugin, 
-  // ClickScrollPlugin 
-} from 'overlayscrollbars';
-=======
 import "overlayscrollbars/overlayscrollbars.css";
 import {
   OverlayScrollbars,
@@ -21,7 +12,6 @@ import {
   // SizeObserverPlugin,
   // ClickScrollPlugin
 } from "overlayscrollbars";
->>>>>>> a936ebe (done with desktop view)
 export interface Props {
   title: string;
 }
@@ -38,7 +28,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
-      content="A decentralized crowdfunding platform built on Bitcoin and Nostr"
+      content="A decentralized crowdfunding protocol built on Bitcoin and Nostr"
     />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -64,32 +54,7 @@ const { title } = Astro.props;
 </html>
 
 <script>
-<<<<<<< HEAD
-import { OverlayScrollbars } from "overlayscrollbars";
 
- 
-document.addEventListener("DOMContentLoaded", () => {
-   const bodyElement = document.querySelector('body');
-
-  OverlayScrollbars(
-
-		{
-			target: bodyElement,
-			cancel: {
-				nativeScrollbarsOverlaid: true,    // don't initialize the overlay scrollbar if there is a native one
-			}
-		}, {
-		scrollbars: {
- 			autoHide: 'move',
-			autoHideDelay: 500,
-			autoHideSuspend: false,
-		},
-	});
-});
-
-
-</script>
-=======
   import { OverlayScrollbars } from "overlayscrollbars";
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -112,4 +77,3 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 </script>
->>>>>>> a936ebe (done with desktop view)

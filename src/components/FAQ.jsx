@@ -10,7 +10,7 @@ const FAQData = [
   {
     question: "How does Angor work?",
     answer:
-      "Angor leverages Bitcoin’s scripting language to program spending conditions like timelocks, hashlocks, and multisig. Each project milestone is represented as a UTXO, releasing funds over time using timelocks, while a 2-of-2 multisig allows investors to exit if needed.",
+      "Angor leverages Bitcoin’s scripting language to program spending conditions like timelocks, hashlocks, and multisig. Each project milestone is represented as a UTXO, releasing funds over time using timelocks, while a 2-of-2 multisig allows investors to exit if needed, when an investor exists a project their Bitcoin becomes locked for the duration of a predefined penalty.",
   },
   {
     question: "What role does Nostr play?",
@@ -46,6 +46,41 @@ const FAQData = [
     question: "How does Angor ensure the security of funds?",
     answer:
       "Angor uses Bitcoin’s time-lock contracts and a 2-of-2 multisig approach, ensuring the security of funds at each stage.",
+  },
+  {
+    question: "How do I recover my unspent funds?",
+    answer:
+      "If you want to exit a project you backed, you can initiate a recovery of any unspent funds through your Angor wallet. This process allows you to exit the project securely.",
+  },
+  {
+    question: "Are there any restrictions/charges for recovering unspent funds?",
+    answer:
+      "There are no charges, except for the miner fee. Angor’s protocol ensures you retain control over your contributions without additional platform fees.",
+  },
+  {
+    question: "How long does it take to recover unspent funds?",
+    answer:
+      "Recovering unspent funds is quick and processed via your Angor wallet. Ensure the recovery transaction fee rate is high enough to get into the target block.",
+  },
+  {
+    question: "What happens if the project is not fully funded?",
+    answer:
+      "If a project doesn’t reach full funding, there are two potential paths: if the founder consents, they can co-sign an exit transaction using the 2-of-2 multisig setup to return funds. If not, the investor may need to engage in a penalty process.",
+  },
+  {
+    question: "When and how are rewards/tokens paid to investors?",
+    answer:
+      "Angor does not manage rewards such as shares or token allocation; this is handled directly between the founder and investor.",
+  },
+  {
+    question: "How can I get updates on the projects' progress?",
+    answer:
+      "You can monitor project progress on Angor Hub, where updates will be posted using the Nostr relays. This provides real-time access to project statuses and milestones. Notifications can be enabled to alert you to significant developments.",
+  },
+  {
+    question: "How do you select and vet crowdfunding projects?",
+    answer:
+      "Angor is a decentralized protocol, and developers do not participate in the selection or vetting of projects listed on the platform. The responsibility for choosing projects lies with the community and the protocol’s trustless design.",
   },
 ];
 
