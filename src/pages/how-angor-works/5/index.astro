@@ -1,0 +1,177 @@
+---
+import NewLayout from "../../../layouts/NewLayout.astro";
+import arrowLeft from "../../../assets/images/arrow-left.png";
+import LongArrow from "../../../assets/icons/LongArrow";
+import CurveArrow from "../../../assets/icons/CurveArrow";
+import CurveArrow2 from "../../../assets/icons/CurveArrow2";
+import BackButton from "../../../components/BackButton";
+---
+
+<NewLayout title="How Angor Works">
+  <div class="flex mt-36 justify-between px-16 font-sans">
+    <BackButton client:load />
+
+    <div class="mx-auto">
+      <div class="max-w-3xl w-full">
+        <div class="flex flex-col items-center justify-center mb-20">
+          <div class="flex flex-col gap-14 w-full relative">
+            <div class="flex items-center">
+              <div
+                class="bg-angorPrimary w-32 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Alice
+              </div>
+              <LongArrow color={"#022229"} id={"longArrow1"} width={180} />
+              <div
+                id="box1"
+                class="border opacity-0 border-[#9747FF] bg-[#EBDFFA] h-28 max-w-xs rounded-2xl p-3 w-full flex items-center gap-4 justify-center flex-col"
+              >
+                <h3 class="text-[#1D1D1D] text-lg font-bold">Asks to invest</h3>
+                <div
+                  class="border border-[#9747FF] bg-white w-full flex items-center justify-center h-9 rounded-md"
+                >
+                  <p class="text-[#1D1D1D] text-xs font-bold">Nostr</p>
+                </div>
+              </div>
+              <LongArrow color={"#D8B9FF"} id={"longArrow2"} width={180} />
+              <div class="relative">
+                <div
+                  id="circle1"
+                  class="bg-[#9747FF] w-28 h-28 rounded-full relative z-10 text-white flex justify-center items-center font-bold text-xs"
+                >
+                  Bob Approves
+                </div>
+                <div class="rotate-90 absolute -left-5 top-20">
+                  <LongArrow color={"#D8B9FF"} id={"longArrow3"} width={150} />
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center relative justify-end">
+              <!-- <LongArrow color={"#D8B9FF"} id={"longArrow1"} width={180} /> -->
+              <div class="absolute -top-12 left-6">
+                <CurveArrow width={230} color={"#D8B9FF"} id={"curveArrow1"} />
+              </div>
+              <div
+                id="box2"
+                class="border border-[#9747FF] bg-[#EBDFFA] h-28 max-w-xs rounded-2xl p-3 w-full flex items-center gap-4 justify-center flex-col"
+              >
+                <h3 class="text-[#1D1D1D] text-lg font-bold">
+                  Sends signature to investor
+                </h3>
+                <div
+                  class="border border-[#9747FF] bg-white w-full flex items-center justify-center h-9 rounded-md"
+                >
+                  <p class="text-[#1D1D1D] text-xs font-bold">Nostr</p>
+                </div>
+              </div>
+              <div class="rotate-180">
+                <LongArrow color={"#D8B9FF"} id={"longArrow4"} width={180} />
+              </div>
+              <div
+                id="circle2"
+                class="bg-[#9747FF] w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Creates Multisig
+              </div>
+            </div>
+
+            <div class="absolute top-28 left-12">
+              <CurveArrow2 id="curveArrow2" width={178} />
+            </div>
+            <div class="flex items-center justify-end">
+              <div
+                id="box3"
+                class="bg-[#022229] h-28 max-w-xs w-full rounded-2xl px-3"
+              >
+                <h2 class="text-[#CBDDE1] text-lg mb-4 mt-3 text-center">
+                  Validates transaction
+                </h2>
+                <div class="flex flex-col gap-2">
+                  <div class="w-full bg-[#086C81] h-2 rounded-sm"></div>
+                  <div class="w-full bg-[#086C81] h-2 rounded-sm"></div>
+                  <div class="w-full bg-[#086C81] h-2 rounded-sm"></div>
+                </div>
+              </div>
+              <LongArrow color={"#022229"} id={"longArrow5"} width={180} />
+              <div
+                id="circle3"
+                class="bg-[#FF9900] w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Publish to Bitcoin
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-[#1D1D1D] font-semibold text-2xl text-center">
+          Bob approved Alice's investment request and provided pre-signed
+          signatures for fund securitddy. Excited, Alice invested in the <span
+            >Urban Green Farms Initiative</span
+          > by publishing a Bitcoin transaction with time-locked UTXOs for each milestone.
+        </p>
+      </div>
+      <a
+        href="/how-angor-works/6"
+        class="w-60 h-14 rounded-md flex justify-center mx-auto hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-24"
+      >
+        Next
+      </a>
+    </div>
+  </div>
+  <script>
+    import { gsap } from "gsap";
+    const longArrow1 = document.getElementById("longArrow1");
+    const longArrow2 = document.getElementById("longArrow2");
+    const longArrow3 = document.getElementById("longArrow3");
+    const longArrow4 = document.getElementById("longArrow4");
+    const longArrow5 = document.getElementById("longArrow5");
+    const curveArrow1 = document.getElementById("curveArrow1");
+    const curveArrow2 = document.getElementById("curveArrow2");
+    const box1 = document.getElementById("box1");
+    const box2 = document.getElementById("box2");
+    const box3 = document.getElementById("box3");
+    const circle1 = document.getElementById("circle1");
+    const circle2 = document.getElementById("circle2");
+    const circle3 = document.getElementById("circle3");
+
+    function handleBackClick() {
+      history.back();
+    }
+    gsap.to(longArrow1, { width: 180, duration: 1 });
+    gsap.fromTo(
+      box1,
+      { opacity: 0, x: -80, delay: 1, duration: 1 },
+      { opacity: 1, x: 0, delay: 1, duration: 1 }
+    );
+    gsap.to(longArrow2, { width: 180, delay: 2, duration: 1 });
+    gsap.fromTo(
+      circle1,
+      { opacity: 0, delay: 3, duration: 1, x: -70 },
+      { opacity: 1, duration: 1, x: 0, delay: 3 }
+    );
+    gsap.to(longArrow3, { width: 150, delay: 4, duration: 1 });
+    gsap.fromTo(
+      circle2,
+      { opacity: 0, delay: 5, duration: 1, y: -70 },
+      { opacity: 1, duration: 1, y: 0, delay: 5 }
+    );
+    gsap.to(longArrow4, { width: 130, delay: 6, duration: 1 });
+    gsap.fromTo(
+      box2,
+      { opacity: 0, x: 80, delay: 7, duration: 1 },
+      { opacity: 1, x: 0, delay: 7, duration: 1 }
+    );
+    gsap.to(curveArrow1, { width: "100%", delay: 8, duration: 1 });
+    gsap.to(curveArrow2, { width: "100%", delay: 8, duration: 1 });
+    gsap.fromTo(
+      box3,
+      { opacity: 0, x: -180, delay: 10, duration: 1 },
+      { opacity: 1, x: 0, delay: 10, duration: 1 }
+    );
+    gsap.to(longArrow5, { width: 130, delay: 11, duration: 1 });
+    gsap.fromTo(
+      circle3,
+      { opacity: 0, delay: 12, duration: 1, x: -70 },
+      { opacity: 1, duration: 1, x: 0, delay: 12 }
+    );
+  </script>
+</NewLayout>

@@ -1,0 +1,69 @@
+---
+import NewLayout from "../../../layouts/NewLayout.astro";
+import arrowLeft from "../../../assets/images/arrow-left.png";
+import LongArrow from "../../../assets/icons/LongArrow";
+import ArrowLongg from "../../../assets/icons/ArrowLongg";
+import BackButton from "../../../components/BackButton";
+---
+
+<NewLayout title="How Angor Works">
+  <div class="flex mt-36 justify-between px-16">
+    <BackButton client:load />
+
+    <div class="mx-auto">
+      <div class="max-w-4xl w-full">
+        <div class="flex justify-center items-center h-28 mb-20">
+          <!-- <div
+                class="bg-[#E8A1A1] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Sam
+              </div>
+              <div
+                class="bg-[#E28989] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Mia
+              </div>
+              <div
+                class="bg-[#DC7272] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Max
+              </div> -->
+          <div
+            class="bg-angorPrimary w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+          >
+            Alice
+          </div>
+          <div class="-rotate-12">
+            <ArrowLongg color={"#022229"} width={"100%"} id={"longArrow1"} />
+          </div>
+          <!-- <LongArrow color={"#022229"} id={"longArrow1"} /> -->
+          <div
+            class="bg-[#9747FF] w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+          >
+            Bob
+          </div>
+        </div>
+        <p class="text-[#1D1D1D] font-semibold text-2xl text-center">
+          Alice decided to invest, as well as create a wallet on Angor and tops
+          with the amount of Bitcoin she wants to invest and send a request on
+          Nostr to get approved as an Investor
+        </p>
+      </div>
+      <a
+        href="/how-angor-works/5"
+        class="w-60 h-14 rounded-md flex justify-center mx-auto hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-20"
+      >
+        Next
+      </a>
+    </div>
+  </div>
+  <script>
+    import { gsap } from "gsap";
+    const longArrow1 = document.getElementById("longArrow1");
+    gsap.fromTo(
+      longArrow1,
+      { width: "0%", duration: 3, ease: "power2.out", delay: 2 },
+      { width: "100%", duration: 3, ease: "power2.out", delay: 2 }
+    );
+  </script>
+</NewLayout>

@@ -1,0 +1,162 @@
+---
+import { projectNostr } from "../../../data";
+import NewLayout from "../../../layouts/NewLayout.astro";
+import arrow from "../../../assets/images/arrow.png";
+import arrowLeft from "../../../assets/images/arrow-left.png";
+import ArrowLongg from "../../../assets/icons/ArrowLongg";
+import BackButton from "../../../components/BackButton";
+// import LongArrow from "../../../assets/icon/LongArrow"
+
+const pageData = {
+  title: "How Angor Works",
+  subtitle: "Understanding the Angor Process",
+};
+
+const navigateToNext = () => {
+  //   window.location.href = "/next-page";
+};
+---
+
+<NewLayout title="How Angor Works">
+  <div class="flex mt-36 justify-between px-16">
+    <BackButton client:load />
+
+    <div class="mx-auto">
+      <div class="max-w-3xl w-full">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col items-center gap-6">
+            <div class="relative">
+              <div
+                class="bg-[#E8A1A1] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Sam
+              </div>
+              <div class="">
+                <p
+                  id="text1"
+                  class="absolute left-28 text-[#E8A1A1] top-12 rotate-[15deg] w-[200px]"
+                >
+                  Invests 5 BTC
+                </p>
+                <div class="absolute rotate-3 left-16 top-8">
+                  <ArrowLongg color="#E8A1A1" id="arrow1" width={553} />
+                  <!-- <LongArrow color="#E8A1A1" id="" /> -->
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div
+                class="bg-[#E28989] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Mia
+              </div>
+              <div class="">
+                <p
+                  id="text2"
+                  class="absolute left-24 text-[#E28989] top-6 rotate-[9deg] w-[200px]"
+                >
+                  Invests 7 BTC
+                </p>
+                <div class="absolute -rotate-6 left-16 -top-4">
+                  <ArrowLongg color="#E28989" id="arrow2" width={542} />
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div
+                class="bg-[#DC7272] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Max
+              </div>
+              <div class="">
+                <p
+                  id="text3"
+                  class="absolute left-24 text-[#DC7272] -top-2 -rotate-2 w-[200px]"
+                >
+                  Invests 4 BTC
+                </p>
+                <div class="absolute -rotate-[16deg] left-16 -top-16">
+                  <ArrowLongg color="#DC7272" id="arrow3" width={542} />
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div
+                class="bg-angorPrimary w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Alice
+              </div>
+              <div class="">
+                <p
+                  id="text4"
+                  class="absolute left-32 -top-2 text-[#022229] -rotate-[15deg] w-full"
+                >
+                  Invests 5 BTC
+                </p>
+                <div class="absolute -rotate-[28deg] left-16 -top-24">
+                  <ArrowLongg color="#022229" id="arrow4" width={570} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="circle1"
+            class="bg-[#9747FF] h-36 w-36 scale-0 opacity-0 rounded-full text-white flex items-center justify-center"
+          >
+            Bob
+          </div>
+        </div>
+        <p class="text-[#1D1D1D] font-semibold text-xl text-center mt-8">
+          Alice an investor that found the Bob’s project on the Nostr network
+          wants to invest, Alice don't really know about Bob’s Project, but some
+          of her friends on Nostr have talked about it and think it has
+          potential, they also saw on the blockchain that the project already
+          raised 60% of their target
+        </p>
+      </div>
+      <a
+        href="/how-angor-works/4"
+        class="w-60 h-14 rounded-md flex justify-center mx-auto hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-20"
+      >
+        Next
+      </a>
+    </div>
+  </div>
+  <script>
+    import { gsap } from "gsap";
+    const circle1 = document.getElementById("circle1");
+    const arrow1 = document.getElementById("arrow1");
+    const arrow2 = document.getElementById("arrow2");
+    const arrow3 = document.getElementById("arrow3");
+    const arrow4 = document.getElementById("arrow4");
+    const text1 = document.getElementById("text1");
+    const text2 = document.getElementById("text2");
+    const text3 = document.getElementById("text3");
+    const text4 = document.getElementById("text4");
+    gsap.to(circle1, { scale: 1, duration: 3, opacity: 1 });
+    gsap.to(arrow1, { width: 553, duration: 3 });
+    gsap.to(arrow2, { width: 542, duration: 3, delay: 3 });
+    gsap.to(arrow3, { width: 542, duration: 3, delay: 5 });
+    gsap.to(arrow4, { width: 570, duration: 3, delay: 7 });
+    gsap.fromTo(
+      text1,
+      { opacity: 0, delay: 2, x: -60, duration: 2 },
+      { opacity: 1, delay: 2, x: 0, duration: 2 }
+    );
+    gsap.fromTo(
+      text2,
+      { opacity: 0, delay: 3, x: -60, duration: 2 },
+      { opacity: 1, delay: 3, x: 0, duration: 2 }
+    );
+    gsap.fromTo(
+      text3,
+      { opacity: 0, delay: 6, x: -60, duration: 2 },
+      { opacity: 1, delay: 6, x: 0, duration: 2 }
+    );
+    gsap.fromTo(
+      text4,
+      { opacity: 0, delay: 8, x: -60, duration: 2 },
+      { opacity: 1, delay: 8, x: 0, duration: 2 }
+    );
+  </script>
+</NewLayout>
