@@ -1,6 +1,6 @@
 import React from "react";
 
-const CurveArrow2 = ({ width, id }) => {
+const CurveArrow2 = ({ width, id,color }) => {
   return (
     <svg
       width={width}
@@ -13,11 +13,11 @@ const CurveArrow2 = ({ width, id }) => {
     >
       <path
         d="M177.506 245.565C177.871 245.828 177.871 246.371 177.506 246.634L162.082 257.705C161.212 258.329 160 257.707 160 256.636L160 235.563C160 234.492 161.212 233.87 162.082 234.495L177.506 245.565Z"
-        fill="#022229"
+        fill={color}
       />
       <path
         d="M4 4V216C4 232.569 17.4315 246 34 246H163"
-        stroke="#022229"
+        stroke={color}
         stroke-width="8"
         stroke-linecap="round"
       />

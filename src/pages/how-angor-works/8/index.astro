@@ -15,7 +15,7 @@ import LongArrow from "../../../assets/icons/LongArrow";
 
     <div class="mx-auto">
       <div class="max-w-6xl w-full">
-        <div class="flex items-center h-28 mb-20">
+        <div class="flex items-center justify-center h-28 mb-20">
           <!-- <div
                 class="bg-[#E8A1A1] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
               >
@@ -40,11 +40,11 @@ import LongArrow from "../../../assets/icons/LongArrow";
             </div>
             <div class="flex flex-col items-center">
               <TextChevronSec color="#022229" text={""} id={"left1"} />
-              <LongArrow color={"#022229"} id={"longArrow1"} />
+              <LongArrow color={"#022229"} id={"longArrow1"} isLong={false} />
             </div>
           </div>
           <div
-            class="border border-[#9747FF] bg-[#EBDFFA] h-28 max-w-xs rounded-2xl p-3 w-full flex items-center gap-4 justify-center flex-col"
+            class="border border-[#022229] bg-[#CBDDE1] h-28 max-w-xs rounded-2xl p-3 w-full flex items-center gap-4 justify-center flex-col"
           >
             <h3 class="text-[#1D1D1D] text-xl font-bold">Presigned Multisig</h3>
             <div
@@ -55,8 +55,8 @@ import LongArrow from "../../../assets/icons/LongArrow";
           </div>
           <div class="flex items-start">
             <div class="flex flex-col items-center">
-              <TextChevronSec color="#9747FF" text={""} id={"left2"} />
-              <LongArrow color={"#9747FF"} id={"longArrow2"} />
+              <TextChevronSec color="#086C81" text={""} id={"left2"} />
+              <LongArrow color={"#086C81"} id={"longArrow2"} isLong={false} />
             </div>
             <div
               id="circle1"
@@ -72,11 +72,12 @@ import LongArrow from "../../../assets/icons/LongArrow";
           the penalty duration to reclaim her funds.
         </p>
       </div>
-      <button
-        class="w-60 h-14 rounded-md flex justify-center bg-angorPrimary items-center text-white text-xl font-bold mx-auto mt-28"
-      >
-        Next
-      </button>
+      <a
+      href="/how-angor-works/9"
+      class="w-60 h-14 rounded-md flex justify-center hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-28 mx-auto"
+    >
+      Next
+    </a>
     </div>
   </div>
   <script>
