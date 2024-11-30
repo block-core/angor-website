@@ -1,0 +1,84 @@
+---
+import NewLayout from "../../../layouts/NewLayout.astro";
+import arrowLeft from "../../../assets/images/arrow-left.png";
+import ChevronIcon from "../../../assets/icons/ChevronIcon";
+import BitcoinIcon from "../../../assets/icons/BitcoinIcon";
+import TextChevronSec from "../../../components/TextChevronSec";
+---
+
+<NewLayout title="How Angor Works">
+  <div
+    class="flex pt-36 bg-[#CBDDE1] h-full justify-between px-16 inter-semibold"
+  >
+    <button
+      class="w-16 h-12 rounded-md flex justify-center bg-angorPrimary items-center"
+    >
+      <img src={arrowLeft.src} width="36" height="36" />
+    </button>
+
+    <div class="mx-auto">
+      <div class="max-w-4xl w-full">
+        <div class="flex items-start justify-center gap-6 h-96 mb-20">
+          <div class="flex items-center gap-4">
+            <div
+              id="box1"
+              class="bg-[#F9F4FF] scale-0 w-28 h-28 rounded-full border border-[#D8B9FF] text-[#9747FF] flex justify-center items-center font-bold text-xs"
+            >
+              90 Days
+            </div>
+            <TextChevronSec
+              color="#9747FF"
+              text="Penalty timePasses"
+              id="left1"
+            />
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              id="box2"
+              class="bg-angorPrimary w-28 h-28 scale-0 rounded-full text-white flex justify-center items-center font-bold text-xs"
+            >
+              Alice
+            </div>
+            <TextChevronSec color="#022229" text="Access" id="left2" />
+          </div>
+          <div
+            id="box3"
+            class="bg-[#FF9900] w-28 h-28 scale-0 rounded-full text-white flex justify-center items-center font-bold text-xs"
+          >
+            <BitcoinIcon />
+          </div>
+        </div>
+        <p class="text-[#1D1D1D] text-2xl text-center">
+          After the 90-day penalty period, Alice gained access to her unspent
+          Bitcoin from the last eight milestones. She reclaimed her funds and
+          fully exited the <span class="text-[#9747FF]"
+            >Urban Green Farms Initiative</span
+          >, successfully pulling out before losing more.
+        </p>
+      </div>
+    </div>
+  </div>
+  <script>
+    import { gsap } from "gsap";
+    const box1 = document.getElementById("box1");
+    const box2 = document.getElementById("box2");
+    const box3 = document.getElementById("box3");
+    const left1 = document.getElementById("left1");
+    const left2 = document.getElementById("left2");
+
+    gsap.to(box1, { scale: 1, duration: 2 });
+    gsap.fromTo(
+      left1,
+      { x: -30, opacity: 0 },
+      { x: 0, duration: 2, opacity: 1 }
+    );
+    gsap.to(box2, { scale: 1, duration: 2, delay: 1 });
+    gsap.to(box3, { scale: 1, duration: 2, delay: 2 });
+    gsap.fromTo(
+      left2,
+      { x: -30, opacity: 0 },
+      { x: 0, duration: 2, opacity: 1, delay: 1 }
+    );
+  </script>
+</NewLayout>
