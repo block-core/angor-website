@@ -5,7 +5,12 @@ import { InvitationModal } from "./InvitationModal";
 import dashboard from "../assets/images/dashboard.gif";
 import Typewriter from "typewriter-effect";
 export const Hero = () => {
+<<<<<<< HEAD
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+=======
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+>>>>>>> 6a36a36 (first commit)
   return (
     <section
       className="w-screen  flex justify-center items-center bg-bgDark1 mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 hero-bg-gradient pb-24 sm:pb-32 md:pb-44 lg:pb-0"
@@ -34,7 +39,11 @@ export const Hero = () => {
             <Typewriter
               options={{
                 strings: [
+<<<<<<< HEAD
                   "A decentralized crowdfunding protocol built on Bitcoin and Nostr",
+=======
+                  "A decentralized crowdfunding platform built on Bitcoin and Nostr",
+>>>>>>> 6a36a36 (first commit)
                 ],
                 autoStart: true,
                 loop: true,
@@ -46,17 +55,26 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
+<<<<<<< HEAD
           className="flex justify-center mt-14 mb-40 sm:mb-40"
         >
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="https://hub.angor.io"
               className="w-full sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
+=======
+        >
+          <div className="flex flex-col gap-2 sm:flex-row mt-14 mb-24 sm:mb-40 justify-center">
+            <a
+              href="https://hub.angor.io"
+              className="w-64 sm:w-52 h-12 rounded-xl mr-0 sm:mr-4 font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
+>>>>>>> 6a36a36 (first commit)
               aria-label="Mainnet"
             >
               Angor Hub
             </a>
 
+<<<<<<< HEAD
             <div className="relative    w-52">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -128,6 +146,31 @@ export const Hero = () => {
           </div>
         </motion.div>
 
+=======
+            <a
+              href="https://test.angor.io"
+              className="w-64 sm:w-52 h-12 rounded-xl mr-0 sm:mr-4 font-bold text-primaryText border border-solid flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
+              aria-label="Hub"
+            >
+              Testnet
+            </a>
+
+            <div className="relative group">
+              <a
+                href="#"
+                className="w-64 sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid flex justify-center items-center cursor-not-allowed bg-bgDark2 border-primaryColor opacity-50"
+                aria-label="Testnet"
+                disabled
+              >
+                Mainnet
+              </a>
+              <div className="absolute top-full mt-2 left-0 w-64 sm:w-52 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out transform scale-95 group-hover:scale-100 bg-gray-800 text-white text-sm py-1 px-2 rounded-lg">
+                Coming Soon
+              </div>
+            </div>
+          </div>
+        </motion.div>
+>>>>>>> 6a36a36 (first commit)
         <motion.div
           initial={{ opacity: 0, y: 10, zIndex: 20 }}
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
@@ -158,6 +201,12 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      {isModalOpen && (
+        <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
+      )}
+>>>>>>> 6a36a36 (first commit)
     </section>
   );
 };

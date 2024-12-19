@@ -1,6 +1,10 @@
 {
 	"_variables": {
+<<<<<<< HEAD
 		"lastUpdateCheck": 1734192732403
+=======
+		"lastUpdateCheck": 1730967768492
+>>>>>>> 6a36a36 (first commit)
 	},
 	"devToolbar": {
 		"enabled": false

@@ -13,10 +13,17 @@
     "astro": "astro"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@astrojs/tailwind": "^5.1.3",
     "@fontsource/inter": "^5.1.0",
     "@swup/astro": "^1.4.1",
     "astro": "^5.0.5",
+=======
+    "@astrojs/tailwind": "^5.1.2",
+    "@fontsource/inter": "^5.1.0",
+    "@swup/astro": "^1.4.1",
+    "astro": "^4.16.7",
+>>>>>>> 6a36a36 (first commit)
     "framer-motion": "^11.11.10",
     "gsap": "^3.12.5",
     "npm": "^10.9.0",
@@ -26,7 +33,11 @@
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@astrojs/react": "^4.1.0",
+=======
+    "@astrojs/react": "^3.6.2",
+>>>>>>> 6a36a36 (first commit)
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   }

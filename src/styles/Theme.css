@@ -1,6 +1,7 @@
 /* Typography */
 
 .block-title {
+<<<<<<< HEAD
   @apply text-primaryText text-3xl font-bold tracking-normal sm:text-4xl md:text-5xl;
 }
 .block-big-title {
@@ -17,6 +18,24 @@
 }
 .content-text-gray {
   @apply text-gray-400 text-base sm:text-lg md:text-xl;
+=======
+  @apply text-primaryText text-3xl font-bold tracking-normal;
+}
+.block-big-title {
+  @apply text-primaryText text-4xl xl:text-5xl font-bold tracking-normal;
+}
+.block-subtitle {
+  @apply text-xs text-secondaryColor  tracking-wider font-bold uppercase;
+}
+.content-title {
+  @apply text-primaryText text-lg font-bold tracking-normal;
+}
+.content-text-white {
+  @apply text-primaryText text-base leading-relaxed;
+}
+.content-text-gray {
+  @apply text-gray-400 text-base;
+>>>>>>> 6a36a36 (first commit)
 }
 
 /* Borders */
@@ -31,16 +50,24 @@
 /* Buttons */
 
 .contained-button {
+<<<<<<< HEAD
   @apply rounded-lg font-bold bg-primaryColor text-primaryText flex justify-center items-center hover:bg-[#086c81] cursor-pointer transition sm:text-lg md:text-xl;
 }
 .outlined-button {
   @apply text-primaryText main-border-gray rounded-xl bg-bgDark2 hover:bg-bgDark3 border-gray-700 text-sm sm:text-base md:text-lg;
+=======
+  @apply rounded-lg font-bold bg-primaryColor text-primaryText flex justify-center items-center hover:bg-[#086c81] cursor-pointer transition;
+}
+.outlined-button {
+  @apply text-primaryText main-border-gray rounded-xl bg-bgDark2 hover:bg-bgDark3  border-gray-700 text-sm;
+>>>>>>> 6a36a36 (first commit)
 }
 
 /* Preventing FOUC */
 @font-face {
   font-display: var(--fontsource-Inter-font-display, optional);
 }
+<<<<<<< HEAD
 
 /* Smooth Scrollbar */
 html {
@@ -51,6 +78,11 @@ html {
   display: flex;
   gap: 10px;
   flex-wrap: wrap; /* Ensure charts wrap on smaller screens */
+=======
+.chart-container {
+  display: flex;
+  gap: 10px;
+>>>>>>> 6a36a36 (first commit)
 }
 
 .bar {
@@ -61,7 +93,10 @@ html {
   padding: 5px;
   transition: height 0.5s ease;
 }
+<<<<<<< HEAD
 
 .top-most {
   z-index: 10000;
 }
+=======
+>>>>>>> 6a36a36 (first commit)

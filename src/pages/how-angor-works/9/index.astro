@@ -1,0 +1,121 @@
+---
+import NewLayout from "../../../layouts/NewLayout.astro";
+import arrowLeft from "../../../assets/images/arrow-left.png";
+import TextChevronSec from "../../../components/TextChevronSec";
+import LongArrow from "../../../assets/icons/LongArrow";
+---
+
+<NewLayout title="How Angor Works">
+  <div class="flex mt-36 justify-between px-16 font-sans">
+    <button
+      class="w-16 h-12 rounded-md flex justify-center bg-angorPrimary items-center"
+    >
+      <img src={arrowLeft.src} width="36" height="36" />
+    </button>
+
+    <div class="mx-auto">
+      <div class="max-w-5xl w-full">
+        <div class="flex items-center h-28 mb-20">
+          <!-- <div
+                class="bg-[#E8A1A1] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Sam
+              </div>
+              <div
+                class="bg-[#E28989] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Mia
+              </div>
+              <div
+                class="bg-[#DC7272] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Max
+              </div> -->
+          <div class="flex items-start">
+            <div
+              id="circle1"
+              class="bg-[#FF4747] scale-0 w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+            >
+              Penalty Trx
+            </div>
+            <div class="flex flex-col items-center">
+              <TextChevronSec
+                color="#FF4747"
+                text={"Published to"}
+                id={"left1"}
+              />
+              <LongArrow color={"#FF4747"} id={"longArrow1"} />
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div
+              id="circle2"
+              class="bg-[#FF9900] scale-0 w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+            >
+              Bitcoin Net
+            </div>
+            <div class="flex flex-col items-center">
+              <TextChevronSec
+                color="#FF9900"
+                text={"Alice Opts Out"}
+                id={"left2"}
+              />
+              <LongArrow color={"#022229"} id={"longArrow2"} />
+            </div>
+          </div>
+
+          <div
+            id="circle3"
+            class="bg-[#022229] scale-0 w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+          >
+            Bitcoin Net
+          </div>
+        </div>
+        <p class="text-[#1D1D1D] font-semibold text-2xl text-center">
+          After publishing the penalty transaction to the Bitcoin network, Alice
+          exits the project but must wait through the penalty duration to
+          reclaim her unspent funds.
+        </p>
+      </div>
+      <button
+        class="w-60 h-14 rounded-md flex justify-center bg-angorPrimary items-center text-white text-xl font-bold mx-auto mt-28"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+  <script>
+    import { gsap } from "gsap";
+    const circle1 = document.getElementById("circle1");
+    const circle2 = document.getElementById("circle2");
+    const circle3 = document.getElementById("circle3");
+    const longArrow1 = document.getElementById("longArrow1");
+    const longArrow2 = document.getElementById("longArrow2");
+    const left1 = document.getElementById("left1");
+    const left2 = document.getElementById("left2");
+    gsap.to(circle1, { scale: 1, duration: 2 });
+    gsap.fromTo(
+      longArrow1,
+      { width: "0%", duration: 2, ease: "power2.out" },
+      { width: "100%", duration: 2 }
+    );
+    gsap.fromTo(
+      longArrow2,
+      { width: "0%", duration: 3, delay: 2, ease: "power2.out" },
+      { width: "100%", duration: 3, delay: 2, ease: "power2.out" }
+    );
+    gsap.to(circle2, { scale: 1, duration: 2, delay: 1 });
+    gsap.to(circle3, { scale: 1, duration: 2, delay: 3 });
+
+    gsap.fromTo(
+      left1,
+      { x: -70, opacity: 0 },
+      { x: 0, opacity: 1, duration: 2, ease: "power2.out" }
+    );
+    gsap.fromTo(
+      left2,
+      { x: -70, opacity: 0, delay: 2 },
+      { x: 0, opacity: 1, duration: 2, ease: "power2.out", delay: 2 }
+    );
+  </script>
+</NewLayout>
