@@ -1,0 +1,111 @@
+---
+import NewLayout from "../../../layouts/NewLayout.astro";
+import arrowLeft from "../../../assets/images/arrow-left.png";
+import TextChevronSec from "../../../components/TextChevronSec";
+import LongArrow from "../../../assets/icons/LongArrow";
+---
+
+<NewLayout title="How Angor Works">
+  <div class="flex mt-36 justify-between px-16 font-sans">
+    <button
+      class="w-16 h-12 rounded-md flex justify-center bg-angorPrimary items-center"
+    >
+      <img src={arrowLeft.src} width="36" height="36" />
+    </button>
+
+    <div class="mx-auto">
+      <div class="max-w-6xl w-full">
+        <div class="flex items-center h-28 mb-20">
+          <!-- <div
+                class="bg-[#E8A1A1] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Sam
+              </div>
+              <div
+                class="bg-[#E28989] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Mia
+              </div>
+              <div
+                class="bg-[#DC7272] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Max
+              </div> -->
+          <div class="flex items-start">
+            <div
+              id="circle1"
+              class="bg-angorPrimary w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+            >
+              Alice
+            </div>
+            <div class="flex flex-col items-center">
+              <TextChevronSec color="#022229" text={""} id={"left1"} />
+              <LongArrow color={"#022229"} id={"longArrow1"} />
+            </div>
+          </div>
+          <div
+            class="border border-[#9747FF] bg-[#EBDFFA] h-28 max-w-xs rounded-2xl p-3 w-full flex items-center gap-4 justify-center flex-col"
+          >
+            <h3 class="text-[#1D1D1D] text-xl font-bold">Presigned Multisig</h3>
+            <div
+              class="border border-[#9747FF] bg-white w-full flex items-center justify-center h-9 rounded-md"
+            >
+              <p class="text-[#1D1D1D] text-xs font-bold">Provided by Bob</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="flex flex-col items-center">
+              <TextChevronSec color="#9747FF" text={""} id={"left2"} />
+              <LongArrow color={"#9747FF"} id={"longArrow2"} />
+            </div>
+            <div
+              id="circle1"
+              class="bg-[#FF4747] w-36 h-20 rounded-2xl text-white flex justify-center items-center font-bold text-base"
+            >
+              Penalty Txn
+            </div>
+          </div>
+        </div>
+        <p class="text-[#1D1D1D] font-semibold text-2xl text-center">
+          Alice uses Bob's multisig signatures to execute a penalty transaction
+          and recover her Bitcoin, officially exiting the project while awaiting
+          the penalty duration to reclaim her funds.
+        </p>
+      </div>
+      <button
+        class="w-60 h-14 rounded-md flex justify-center bg-angorPrimary items-center text-white text-xl font-bold mx-auto mt-28"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+  <script>
+    import { gsap } from "gsap";
+    const longArrow1 = document.getElementById("longArrow1");
+    const longArrow2 = document.getElementById("longArrow2");
+    const left1 = document.getElementById("left1");
+    const left2 = document.getElementById("left2");
+
+    gsap.fromTo(
+      longArrow1,
+      { width: "0%", duration: 2, ease: "power2.out" },
+      { width: "100%", duration: 2 }
+    );
+    gsap.fromTo(
+      longArrow2,
+      { width: "0%", duration: 2, ease: "power2.out", delay: 2 },
+      { width: "100%", duration: 2, delay: 2 }
+    );
+
+    gsap.fromTo(
+      left1,
+      { x: -70, opacity: 0 },
+      { x: 0, opacity: 1, duration: 2, ease: "power2.out" }
+    );
+    gsap.fromTo(
+      left2,
+      { x: -70, opacity: 0, delay: 2 },
+      { x: 0, opacity: 1, duration: 2, ease: "power2.out", delay: 2 }
+    );
+  </script>
+</NewLayout>

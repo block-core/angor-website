@@ -2,6 +2,11 @@ import { AngorLogo } from "../assets/logos/AngorLogo";
 import { NostrIcon } from "../assets/icons/NostrIcon";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6a36a36 (first commit)
 export const Footer = () => {
   return (
     <footer aria-label="Site footer">
@@ -20,6 +25,7 @@ export const Footer = () => {
               <p className="mb-10 mt-4 sm:w-[22rem] lg:w-[20rem] xl:w-[24rem] text-gray-400 leading-loose text-center lg:text-left mx-auto lg:mx-0">
                 Angor is a decentralized crowdfunding platform built on Bitcoin
               </p>
+<<<<<<< HEAD
               <div className="w-36 mx-auto lg:mx-0 flex items-center space-x-2">
   {/* GitHub Icon with Tooltip */}
   <div className="relative group">
@@ -64,6 +70,24 @@ export const Footer = () => {
   </div>
 </div>
 
+=======
+              <div className="w-36 mx-auto lg:mx-0">
+                <a
+                  className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] outlined-button"
+                  href="https://github.com/block-core/angor"
+                  aria-label="Github"
+                >
+                  <GithubIcon />
+                </a>
+                <a
+                  className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
+                  href="https://hub.angor.io/profile/3ab7c2108524b7d1c1c585f09c1b7e194f5e7f225a5bb947f378e074d74e9dbf"
+                  aria-label="Nostr"
+                >
+                  <NostrIcon />
+                </a>
+                  </div>
+>>>>>>> 6a36a36 (first commit)
             </div>
             <div className="w-full lg:w-2/3  lg:pl-16 hidden lg:flex flex-wrap justify-between">
               <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
@@ -71,7 +95,11 @@ export const Footer = () => {
                   Products
                 </h3>
                 <ul>
+<<<<<<< HEAD
                   <li className="mb-4">
+=======
+                <li className="mb-4">
+>>>>>>> 6a36a36 (first commit)
                     <a
                       className="text-gray-400 hover:text-gray-300"
                       href="https://beta.angor.io"
@@ -106,11 +134,19 @@ export const Footer = () => {
                       Angor status
                     </a>
                   </li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6a36a36 (first commit)
                 </ul>
               </div>
               <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
                 <h3 className="mb-6 text-2xl font-bold text-primaryText">
+<<<<<<< HEAD
                   Important Links
+=======
+                Important Links
+>>>>>>> 6a36a36 (first commit)
                 </h3>
                 <ul>
                   <li className="mb-4">
@@ -119,9 +155,15 @@ export const Footer = () => {
                       href="https://docs.angor.io"
                     >
                       Angor docs
+<<<<<<< HEAD
                     </a>
                   </li>
                   <li className="mb-4">
+=======
+                    </a> 
+                    </li>
+                    <li className="mb-4">
+>>>>>>> 6a36a36 (first commit)
                     <a
                       className="text-gray-400 hover:text-gray-300"
                       href="https://blog.angor.io"
@@ -129,8 +171,13 @@ export const Footer = () => {
                       Angor blog
                     </a>
                   </li>
+<<<<<<< HEAD
 
                   <li className="mb-4">
+=======
+                                  
+                <li className="mb-4">
+>>>>>>> 6a36a36 (first commit)
                     <a
                       className="text-gray-400 hover:text-gray-300"
                       href="https://brand.angor.io"
@@ -138,6 +185,7 @@ export const Footer = () => {
                       Angor brand
                     </a>
                   </li>
+<<<<<<< HEAD
                   <li className="mb-4">
                     <a
                       className="text-gray-400 hover:text-gray-300"
@@ -146,6 +194,8 @@ export const Footer = () => {
                      Bitcoin Faucet
                     </a>
                   </li>
+=======
+>>>>>>> 6a36a36 (first commit)
                 </ul>
               </div>
               <div className="w-full md:w-1/3 lg:w-auto">
@@ -153,6 +203,7 @@ export const Footer = () => {
                   Angor
                 </h3>
                 <ul>
+<<<<<<< HEAD
                   <li className="mb-4">
                     <a className="text-gray-400 hover:text-gray-300" href="#">
                       Terms & Conditions
@@ -161,6 +212,24 @@ export const Footer = () => {
                   <li className="mb-4">
                     <a className="text-gray-400 hover:text-gray-300" href="#">
                       Privacy Policy
+=======
+
+
+                  <li className="mb-4">
+                    <a
+                      className="text-gray-400 hover:text-gray-300"
+                      href="#"
+                    >
+                     Terms & Conditions
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      className="text-gray-400 hover:text-gray-300"
+                      href="#"
+                    >
+                     Privacy Policy
+>>>>>>> 6a36a36 (first commit)
                     </a>
                   </li>
                 </ul>

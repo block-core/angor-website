@@ -1,0 +1,70 @@
+---
+import { projectNostr } from "../../../data";
+import NewLayout from "../../../layouts/NewLayout.astro";
+import arrow from "../../../assets/images/arrow.png";
+import arrowLeft from "../../../assets/images/arrow-left.png";
+
+const pageData = {
+  title: "How Angor Works",
+  subtitle: "Understanding the Angor Process",
+};
+
+const navigateToNext = () => {
+  //   window.location.href = "/next-page";
+};
+---
+
+<NewLayout title="How Angor Works">
+  <div class="flex mt-36 justify-between px-16">
+    <button
+      class="w-16 h-12 rounded-md flex justify-center bg-angorPrimary items-center"
+    >
+      <img src={arrowLeft.src} width="36" height="36" />
+    </button>
+
+    <div class="mx-auto">
+      <div class="max-w-3xl w-full">
+        <div class="flex flex-col items-center gap-6">
+          <div
+            class="bg-[#E8A1A1] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+          >
+            Sam
+          </div>
+          <div
+            class="bg-[#E28989] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+          >
+            Mia
+          </div>
+          <div
+            class="bg-[#DC7272] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+          >
+            Max
+          </div>
+          <div
+            class="bg-angorPrimary w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+          >
+            Alice
+          </div>
+        </div>
+        <p class="text-[#1D1D1D] font-semibold text-xl text-center mt-8">
+          Alice an investor that found the Bob’s project on the Nostr network
+          wants to invest, Alice don't really know about Bob’s Project, but some
+          of her friends on Nostr have talked about it and think it has
+          potential, they also saw on the blockchain that the project already
+          raised 60% of their target
+        </p>
+      </div>
+      <button
+        class="w-60 h-14 rounded-md flex justify-center bg-angorPrimary items-center text-[#1D1D1D] text-xl font-bold mx-auto mt-28"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+
+  <!-- <p class="text-center text-xl">Bob has a business model in place and creates a project called <span>"Urban Green Farms Initiative"</span> on Angor, aiming to raise 21 BTC across 10 milestones.</p>
+      
+      <button class="w-60 h-14 rounded-md flex justify-center  bg-angorPrimary items-center text-[#1D1D1D] text-xl font-bold">
+          Next
+      </button> -->
+</NewLayout>

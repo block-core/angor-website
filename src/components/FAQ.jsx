@@ -10,7 +10,11 @@ const FAQData = [
   {
     question: "How does Angor work?",
     answer:
+<<<<<<< HEAD
       "Angor leverages Bitcoin’s scripting language to program spending conditions like timelocks, hashlocks, and multisig. Each project milestone is represented as a UTXO, releasing funds over time using timelocks, while a 2-of-2 multisig allows investors to exit if needed, when an investor exists a project their Bitcoin becomes locked for the duration of a predefined penalty.",
+=======
+      "Angor leverages Bitcoin’s scripting language to program spending conditions like timelocks, hashlocks, and multisig. Each project milestone is represented as a UTXO, releasing funds over time using timelocks, while a 2-of-2 multisig allows investors to exit if needed.",
+>>>>>>> 6a36a36 (first commit)
   },
   {
     question: "What role does Nostr play?",
@@ -47,6 +51,7 @@ const FAQData = [
     answer:
       "Angor uses Bitcoin’s time-lock contracts and a 2-of-2 multisig approach, ensuring the security of funds at each stage.",
   },
+<<<<<<< HEAD
   {
     question: "How do I recover my unspent funds?",
     answer:
@@ -82,6 +87,8 @@ const FAQData = [
     answer:
       "Angor is a decentralized protocol, and developers do not participate in the selection or vetting of projects listed on the platform. The responsibility for choosing projects lies with the community and the protocol’s trustless design.",
   },
+=======
+>>>>>>> 6a36a36 (first commit)
 ];
 
 

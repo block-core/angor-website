@@ -1,0 +1,52 @@
+---
+import NewLayout from "../../../layouts/NewLayout.astro";
+import arrowLeft from "../../../assets/images/arrow-left.png";
+---
+
+<NewLayout title="How Angor Works">
+  <div class="flex mt-36 justify-between px-16 font-sans">
+    <button
+      class="w-16 h-12 rounded-md flex justify-center bg-angorPrimary items-center"
+    >
+      <img src={arrowLeft.src} width="36" height="36" />
+    </button>
+
+    <div class="mx-auto">
+      <div class="max-w-4xl w-full">
+        <div class="flex flex-col items-center gap-6 h-28 mb-20">
+          <!-- <div
+                class="bg-[#E8A1A1] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Sam
+              </div>
+              <div
+                class="bg-[#E28989] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Mia
+              </div>
+              <div
+                class="bg-[#DC7272] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              >
+                Max
+              </div> -->
+          <!-- <div
+            class="bg-angorPrimary w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+          >
+            Alice
+          </div> -->
+        </div>
+        <p class="text-[#1D1D1D] font-semibold text-2xl text-center">
+          As the weeks passed, Bob completed the first two milestones, claiming
+          2.1 BTC for each as the time-locks expired. The momentum was building,
+          making his vision of <span>Urban Green Farms Initiative</span> seem increasingly
+          achievable.
+        </p>
+      </div>
+      <button
+        class="w-60 h-14 rounded-md flex justify-center bg-angorPrimary items-center text-[#1D1D1D] text-xl font-bold mx-auto mt-28"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+</NewLayout>

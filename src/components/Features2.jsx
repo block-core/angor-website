@@ -45,6 +45,7 @@ export const Features2 = () => (
 
             <ul className="mb-6 text-primaryText">
               <li className="mb-4 flex">
+<<<<<<< HEAD
                 <span>Tech stack:</span>
               </li>
               <li className="mb-4 flex">
@@ -66,6 +67,30 @@ export const Features2 = () => (
               <li className="mb-4 flex">
                 <CheckArrowIcon />
                 <span>Hash locks for group revocation</span>
+=======
+                <CheckArrowIcon />
+                <span>Tech stack.</span>
+              </li>
+              <li className="mb-4 flex">
+                <CheckArrowIcon />
+                <span>Multisig 2-of-2 for revocation.</span>
+              </li>
+              <li className="mb-4 flex">
+                <CheckArrowIcon />
+                <span>Taproot for efficiency.</span>
+              </li>
+              <li className="mb-4 flex">
+                <CheckArrowIcon />
+                <span>Time-lock contracts (CLTV, CSV).</span>
+              </li>
+              <li className="mb-4 flex">
+                <CheckArrowIcon />
+                <span>Nostr protocol.</span>
+              </li>
+              <li className="mb-4 flex">
+                <CheckArrowIcon />
+                <span>Hash locks.</span>
+>>>>>>> 6a36a36 (first commit)
               </li>
             </ul>
           </div>
