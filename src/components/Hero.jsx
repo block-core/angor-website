@@ -89,20 +89,38 @@ export const Hero = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="absolute top-full mt-2 left-0 w-full bg-bgDark2 border border-primaryColor rounded-lg shadow-lg z-10 overflow-hidden"
+                  className="top-most absolute top-full mt-2 left-0 w-full bg-bgDark2 border border-primaryColor rounded-lg shadow-lg z-10 overflow-hidden"
                 >
                   <a
                     href="https://test.angor.io"
                     className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
                   >
-                    Testnet
+                    Web (Testnet)
                   </a>
-                  <a
+                  {/* <a
                     href="#"
                     className="block px-4 py-2 text-primaryText opacity-50 cursor-not-allowed bg-bgDark2 text-center rounded-b-lg"
                     aria-disabled="true"
                   >
                     Mainnet
+                  </a> */}
+                  <a
+                    href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-win-x64.msi"
+                    className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
+                    >
+                    Windows
+                  </a>
+                  <a
+                    href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-mac-aarch64.dmg"
+                    className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
+                    >
+                    Mac
+                  </a>
+                  <a
+                    href="https://github.com/block-core/angor/releases/download/0.0.75/angor-desktop-0.0.75-linux-amd64.AppImage"
+                    className="block px-4 py-2 text-primaryText hover:bg-bgDark3 transition text-center rounded-t-lg"
+                    >
+                    Linux
                   </a>
                 </motion.div>
               )}
