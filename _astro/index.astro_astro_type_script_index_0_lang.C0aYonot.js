@@ -1,0 +1,1 @@
+import{g as o}from"./index.DjKJqAo0.js";const e=document.getElementById("longArrow1");o.fromTo(e,{width:"0%",duration:3,ease:"power2.out",delay:2},{width:"100%",duration:3,ease:"power2.out",delay:2});
