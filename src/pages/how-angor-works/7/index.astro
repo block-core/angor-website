@@ -1,5 +1,5 @@
 ---
-import NewLayout from "../../../layouts/NewLayout.astro";
+import NewLayout from "../../../layouts/Layout.astro";
 import arrowLeft from "../../../assets/images/arrow-left.png";
 import CheckMark from "../../../assets/icons/CheckMark";
 import XCircle from "../../../assets/icons/XCircle";
@@ -10,7 +10,7 @@ import BackButton from "../../../components/BackButton";
 ---
 
 <NewLayout title="How Angor Works">
-  <div class="flex mt-36 justify-between px-16 font-sans">
+  <div class="flex flex-col mt-36 justify-between md:px-16 font-sans">
     <BackButton client:load />
 
     <div class="mx-auto">
@@ -34,52 +34,60 @@ import BackButton from "../../../components/BackButton";
           <div class="relative">
             <div
               id="circle1"
-              class="bg-angorPrimary w-36 h-36 scale-0 opacity-0 relative z-10 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              class="bg-angorPrimary md:w-36 md:h-36 w-16 h-16 scale-0 opacity-0 relative z-10 rounded-full text-white flex justify-center items-center font-bold text-xs"
             >
               Alice
             </div>
-            <div class="absolute -rotate-[30deg] -top-32 left-16">
+            <div
+              class="absolute md:-rotate-[30deg] -rotate-[45deg] -top-40 -left-2 md:-top-32 md:left-16"
+            >
               <ArrowLongg color={"#022229"} width={620} id={"arrow1"} />
             </div>
-            <div class="absolute -rotate-[25deg] -top-20 left-16">
+            <div
+              class="absolute md:-rotate-[25deg] md:-top-20 md:left-16 left-0 -top-32 -rotate-[40deg]"
+            >
               <ArrowLongg color={"#022229"} width={615} id={"arrow2"} />
             </div>
-            <div class="absolute -rotate-[18deg] -top-7 left-16">
+            <div
+              class="absolute md:-rotate-[18deg] md:-top-7 md:left-16 left-0 -top-24 -rotate-[27deg]"
+            >
               <ArrowLongg color={"#086C81"} width={610} id={"arrow3"} />
             </div>
-            <div class="absolute -rotate-[10deg] top-5 left-16">
+            <div
+              class="absolute md:-rotate-[10deg] md:top-5 md:left-16 -top-16 left-0 -rotate-[16deg]"
+            >
               <ArrowLongg color={"#086C81"} width={610} id={"arrow4"} />
             </div>
           </div>
           <div id="rec1" class="flex flex-col items-center">
             <div
-              class="bg-[#022229] w-[220px] h-[74px] rounded-md p-3 text-white flex items-center justify-center gap-2"
+              class="bg-[#022229] md:w-[220px] md:h-[74px] w-36 h-10 rounded-md p-3 text-white flex items-center justify-center gap-2"
             >
-              <p class="text-xl">Milestone 1</p>
+              <p class="md:text-xl text-sm">Milestone 1</p>
               <CheckMark />
             </div>
             <BottomLine />
             <div
-              class="bg-[#022229] w-[220px] h-[74px] rounded-md p-3 text-white flex items-center justify-center gap-2"
+              class="bg-[#022229] md:w-[220px] md:h-[74px] w-36 h-10 rounded-md p-3 text-white flex items-center justify-center gap-2"
             >
-              <p class="text-xl">Milestone 2</p>
+              <p class="md:text-xl text-sm">Milestone 2</p>
               <CheckMark />
             </div>
 
             <BottomLine />
 
             <div
-              class="bg-[#fff] border-2 border-[#086C81] w-[220px] h-[74px] rounded-md p-3 text-[#086C81] flex items-center justify-center gap-2"
+              class="bg-[#fff] border-2 border-[#086C81] md:w-[220px] md:h-[74px] w-36 h-10 rounded-md p-3 text-[#086C81] flex items-center justify-center gap-2"
             >
-              <p class="text-xl">Milestone 3</p>
+              <p class="md:text-xl text-sm">Milestone 3</p>
               <XCircle />
             </div>
             <BottomLine />
 
             <div
-              class="bg-[#fff] border-2 border-[#086C81] w-[220px] h-[74px] rounded-md p-3 text-[#086C81] flex items-center justify-center gap-2"
+              class="bg-[#fff] border-2 border-[#086C81] md:w-[220px] md:h-[74px] w-36 h-10 rounded-md p-3 text-[#086C81] flex items-center justify-center gap-2"
             >
-              <p class="text-xl">Milestone 4</p>
+              <p class="md:text-xl text-sm">Milestone 4</p>
               <XCircle />
             </div>
             <div class="mt-2 flex flex-col gap-4 items-center">
@@ -91,7 +99,9 @@ import BackButton from "../../../components/BackButton";
             </div>
           </div>
         </div>
-        <p class="text-[#1D1D1D] font-semibold text-2xl text-center">
+        <p
+          class="text-[#1D1D1D] font-semibold text-base md:text-2xl text-center"
+        >
           Just before the third milestone, Alice lost confidence in the project.
           Concerned about her investment, she decided to exit to avoid further
           losses.
@@ -99,7 +109,7 @@ import BackButton from "../../../components/BackButton";
       </div>
       <a
         href="/how-angor-works/8"
-        class="w-60 h-14 rounded-md flex justify-center mx-auto hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-28"
+        class="max-w-96 w-full h-14 rounded-md flex justify-center mx-auto hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-28"
       >
         Next
       </a>
@@ -113,6 +123,8 @@ import BackButton from "../../../components/BackButton";
     const arrow4 = document.getElementById("arrow4");
     const circle1 = document.getElementById("circle1");
     const rec1 = document.getElementById("rec1");
+    const mm = gsap.matchMedia();
+
     gsap.to(arrow1, { width: 620, duration: 2, delay: 4 });
     gsap.to(arrow2, { width: 615, duration: 2, delay: 4.5 });
     gsap.to(arrow3, { width: 610, duration: 2, delay: 5.5 });
@@ -123,5 +135,11 @@ import BackButton from "../../../components/BackButton";
       { opacity: 0, x: 70, duration: 3, delay: 2 },
       { opacity: 1, x: 0, duration: 3, delay: 2 }
     );
+    mm.add("(max-width: 767px)", () => {
+      gsap.to(arrow1, { width: 300, duration: 2, delay: 4 });
+      gsap.to(arrow2, { width: 300, duration: 2, delay: 4.5 });
+      gsap.to(arrow3, { width: 300, duration: 2, delay: 5.5 });
+      gsap.to(arrow4, { width: 300, duration: 2, delay: 6 });
+    });
   </script>
 </NewLayout>

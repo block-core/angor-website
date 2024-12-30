@@ -1,5 +1,5 @@
 ---
-import NewLayout from "../../../layouts/NewLayout.astro";
+import NewLayout from "../../../layouts/Layout.astro";
 import arrowLeft from "../../../assets/images/arrow-left.png";
 import LongArrow from "../../../assets/icons/LongArrow";
 import CurveArrow from "../../../assets/icons/CurveArrow";
@@ -8,11 +8,11 @@ import BackButton from "../../../components/BackButton";
 ---
 
 <NewLayout title="How Angor Works">
-  <div class="flex mt-36 justify-between px-16 font-sans">
+  <div class="flex flex-col mt-36 justify-between md:px-16 font-sans">
     <BackButton client:load />
 
     <div class="mx-auto">
-      <div class="max-w-3xl w-full">
+      <div class="max-w-96 md:max-w-3xl w-full">
         <div class="flex flex-col items-center justify-center mb-20">
           <div class="flex flex-col gap-14 w-full relative">
             <div class="flex items-center">
@@ -21,62 +21,62 @@ import BackButton from "../../../components/BackButton";
               >
                 Alice
               </div>
-              <LongArrow isLong={false} color={"#022229"} id={"longArrow1"} width={180} />
+              <LongArrow color={"#022229"} id={"longArrow1"} width={180} />
               <div
                 id="box1"
-                class="border opacity-0 border-[#086C81] bg-[#CBDDE1] h-28 max-w-xs rounded-2xl p-3 w-full flex items-center gap-4 justify-center flex-col"
+                class="border opacity-0 border-[#9747FF] bg-[#EBDFFA] h-28 max-w-xs rounded-2xl p-3 w-full flex items-center gap-4 justify-center flex-col"
               >
                 <h3 class="text-[#1D1D1D] text-lg font-bold">Asks to invest</h3>
                 <div
-                  class="border border-[#086C81] bg-white w-full flex items-center justify-center h-9 rounded-md"
+                  class="border border-[#9747FF] bg-white w-full flex items-center justify-center h-9 rounded-md"
                 >
                   <p class="text-[#1D1D1D] text-xs font-bold">Nostr</p>
                 </div>
               </div>
-              <LongArrow isLong={false} color={"#086C81"} id={"longArrow2"} width={180} />
+              <LongArrow color={"#D8B9FF"} id={"longArrow2"} width={180} />
               <div class="relative">
                 <div
                   id="circle1"
-                  class="bg-[#086C81] text-center w-28 h-28 rounded-full relative z-10 text-white flex justify-center items-center font-bold text-xs"
+                  class="bg-[#9747FF] w-28 h-28 rounded-full relative z-10 text-white flex justify-center items-center font-bold text-xs"
                 >
-                  Bob <br> Approves
+                  Bob Approves
                 </div>
-                <div class="rotate-90 absolute -left-5 top-20 mt-3">
-                  <LongArrow isLong={false} color={"#086C81"} id={"longArrow3"} width={150} />
+                <div class="rotate-90 absolute -left-5 top-20">
+                  <LongArrow color={"#D8B9FF"} id={"longArrow3"} width={150} />
                 </div>
               </div>
             </div>
             <div class="flex items-center relative justify-end">
-              <!-- <LongArrow isLong={false} color={"#086C81"} id={"longArrow1"} width={180} /> -->
+              <!-- <LongArrow color={"#D8B9FF"} id={"longArrow1"} width={180} /> -->
               <div class="absolute -top-12 left-6">
-                <CurveArrow width={230} color={"#086C81"} id={"curveArrow1"} />
+                <CurveArrow width={230} color={"#D8B9FF"} id={"curveArrow1"} />
               </div>
               <div
                 id="box2"
-                class="border border-[#086C81] bg-[#CBDDE1] h-28 max-w-xs rounded-2xl p-3 w-full flex items-center gap-4 justify-center flex-col"
+                class="border border-[#9747FF] bg-[#EBDFFA] h-28 max-w-xs rounded-2xl p-3 w-full flex items-center gap-4 justify-center flex-col"
               >
                 <h3 class="text-[#1D1D1D] text-lg font-bold">
                   Sends signature to investor
                 </h3>
                 <div
-                  class="border border-[#086C81] bg-white w-full flex items-center justify-center h-9 rounded-md"
+                  class="border border-[#9747FF] bg-white w-full flex items-center justify-center h-9 rounded-md"
                 >
                   <p class="text-[#1D1D1D] text-xs font-bold">Nostr</p>
                 </div>
               </div>
               <div class="rotate-180">
-                <LongArrow isLong={false} color={"#086C81"} id={"longArrow4"} width={180} />
+                <LongArrow color={"#D8B9FF"} id={"longArrow4"} width={180} />
               </div>
               <div
                 id="circle2"
-                class="bg-[#086C81] text-center w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+                class="bg-[#9747FF] w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
               >
-                Creates <br> Multisig
+                Creates Multisig
               </div>
             </div>
 
             <div class="absolute top-28 left-12">
-              <CurveArrow2 color={'#022229'} id="curveArrow2" width={178} />
+              <CurveArrow2 id="curveArrow2" width={178} />
             </div>
             <div class="flex items-center justify-end">
               <div
@@ -92,7 +92,7 @@ import BackButton from "../../../components/BackButton";
                   <div class="w-full bg-[#086C81] h-2 rounded-sm"></div>
                 </div>
               </div>
-              <LongArrow isLong={false} color={"#022229"} id={"longArrow5"} width={180} />
+              <LongArrow color={"#022229"} id={"longArrow5"} width={180} />
               <div
                 id="circle3"
                 class="bg-[#FF9900] w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"

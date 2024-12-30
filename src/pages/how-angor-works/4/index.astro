@@ -1,5 +1,5 @@
 ---
-import NewLayout from "../../../layouts/NewLayout.astro";
+import NewLayout from "../../../layouts/Layout.astro";
 import arrowLeft from "../../../assets/images/arrow-left.png";
 import LongArrow from "../../../assets/icons/LongArrow";
 import ArrowLongg from "../../../assets/icons/ArrowLongg";
@@ -7,7 +7,7 @@ import BackButton from "../../../components/BackButton";
 ---
 
 <NewLayout title="How Angor Works">
-  <div class="flex mt-36 justify-between px-16">
+  <div class="flex flex-col mt-36 justify-between px-3 md:px-16">
     <BackButton client:load />
 
     <div class="mx-auto">
@@ -29,21 +29,23 @@ import BackButton from "../../../components/BackButton";
                 Max
               </div> -->
           <div
-            class="bg-angorPrimary w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+            class="bg-angorPrimary md:w-28 md:h-28 w-14 h-14 rounded-full text-white flex justify-center items-center font-bold text-xs"
           >
             Alice
           </div>
-          <div class="-rotate-12">
+          <div class="-rotate-12 w-[70%]">
             <ArrowLongg color={"#022229"} width={"100%"} id={"longArrow1"} />
           </div>
           <!-- <LongArrow color={"#022229"} id={"longArrow1"} /> -->
           <div
-            class="bg-[#086C81] w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+            class="bg-[#9747FF] md:w-28 md:h-28 w-14 h-14 rounded-full text-white flex justify-center items-center font-bold text-xs"
           >
             Bob
           </div>
         </div>
-        <p class="text-[#1D1D1D] font-semibold text-2xl text-center">
+        <p
+          class="text-[#1D1D1D] font-semibold text-base md:text-2xl text-center"
+        >
           Alice decided to invest, as well as create a wallet on Angor and tops
           with the amount of Bitcoin she wants to invest and send a request on
           Nostr to get approved as an Investor
@@ -51,7 +53,7 @@ import BackButton from "../../../components/BackButton";
       </div>
       <a
         href="/how-angor-works/5"
-        class="w-60 h-14 rounded-md flex justify-center mx-auto hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-20"
+        class="max-w-96 w-full h-14 rounded-md flex justify-center mx-auto hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-20"
       >
         Next
       </a>

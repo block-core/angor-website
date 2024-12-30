@@ -1,5 +1,5 @@
 ---
-import NewLayout from "../../../layouts/NewLayout.astro";
+import NewLayout from "../../../layouts/Layout.astro";
 import arrowLeft from "../../../assets/images/arrow-left.png";
 import LongArrow from "../../../assets/icons/LongArrow";
 import ChevronIcon from "../../../assets/icons/ChevronIcon";
@@ -7,36 +7,36 @@ import BackButton from "../../../components/BackButton";
 ---
 
 <NewLayout title="How Angor Works">
-  <div class="flex mt-36 justify-between px-16 font-sans">
+  <div class="flex flex-col mt-36 justify-between md:px-16 font-sans">
     <BackButton client:load />
 
     <div class="mx-auto">
       <div class="max-w-4xl w-full">
         <div class="flex items-start mb-20">
           <!-- <div
-                class="bg-[#E8A1A1] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+                class="bg-[#E8A1A1] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold md:text-xs text-[9px]"
               >
                 Sam
               </div>
               <div
-                class="bg-[#E28989] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+                class="bg-[#E28989] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold md:text-xs text-[9px]"
               >
                 Mia
               </div>
               <div
-                class="bg-[#DC7272] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+                class="bg-[#DC7272] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold md:text-xs text-[9px]"
               >
                 Max
               </div> -->
           <div class="flex items-center mt-4 relative max-w-xs w-full">
             <div
               id="circle1"
-              class="bg-[#086C81] w-28 h-28 z-10 scale-0 opacity-0 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              class="bg-[#9747FF] w-14 h-14 md:w-28 md:h-28 z-10 scale-0 opacity-0 rounded-full text-white flex justify-center items-center font-bold md:text-xs text-[9px]"
             >
               Bob
             </div>
-            <div class="absolute left-24">
-              <LongArrow width={250} color={"#086C81"} id={"longArrow1"} />
+            <div class="absolute left-12 md:left-24">
+              <LongArrow width={250} color={"#D8B9FF"} id={"longArrow1"} />
             </div>
           </div>
           <div
@@ -46,7 +46,7 @@ import BackButton from "../../../components/BackButton";
             <div class="flex items-start justify-between">
               <div class="flex flex-col items-center">
                 <div
-                  class="bg-[#FF9900] w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+                  class="bg-[#FF9900] w-14 h-14 md:w-28 md:h-28 rounded-full text-white flex justify-center items-center font-bold md:text-xs text-[9px]"
                 >
                   Milestone 1
                 </div>
@@ -55,19 +55,19 @@ import BackButton from "../../../components/BackButton";
                     <ChevronIcon color={"#47BFFF"} />
                   </div>
                   <div
-                    class="bg-[#47BFFF] w-16 h-16 rounded-full flex justify-center items-center text-sm px-2 text-center text-white"
+                    class="bg-[#47BFFF] w-10 h-10 md:w-28 md:h-28 rounded-full flex justify-center items-center text-[9px] md:text-sm px-2 text-center text-white"
                   >
                     2.1 BTC
                   </div>
                 </div>
               </div>
               <div class="mt-12">
-                <LongArrow width={"100%"} color={"#086C81"} id={"longArrow2"} />
+                <LongArrow width={"100%"} color={"#D8B9FF"} id={"longArrow2"} />
                 <p class="text-center text-[#A96500] text-[16.24px]">Project</p>
               </div>
               <div class="flex flex-col items-center">
                 <div
-                  class="bg-[#FF9900] w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+                  class="bg-[#FF9900] w-14 h-14 md:w-28 md:h-28 rounded-full text-white flex justify-center items-center font-bold md:text-xs text-[9px]"
                 >
                   Milestone 2
                 </div>
@@ -76,7 +76,7 @@ import BackButton from "../../../components/BackButton";
                     <ChevronIcon color={"#47BFFF"} />
                   </div>
                   <div
-                    class="bg-[#47BFFF] w-16 h-16 rounded-full flex justify-center items-center text-sm px-2 text-center text-white"
+                    class="bg-[#47BFFF] w-10 h-10 md:w-28 md:h-28 rounded-full flex justify-center items-center text-[9px] md:text-sm px-2 text-center text-white"
                   >
                     2.1 BTC
                   </div>
@@ -85,7 +85,10 @@ import BackButton from "../../../components/BackButton";
             </div>
           </div>
         </div>
-        <p class="text-[#1D1D1D] font-semibold text-2xl text-center" id="text1">
+        <p
+          class="text-[#1D1D1D] font-semibold text-base md:text-2xl text-center"
+          id="text1"
+        >
           As the weeks passed, Bob completed the first two milestones, claiming
           2.1 BTC for each as the time-locks expired. The momentum was building,
           making his vision of <span>Urban Green Farms Initiative</span> seem increasingly
@@ -94,7 +97,7 @@ import BackButton from "../../../components/BackButton";
       </div>
       <a
         href="/how-angor-works/7"
-        class="w-60 h-14 rounded-md flex justify-center hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-28 mx-auto"
+        class="max-w-96 w-full h-14 rounded-md flex justify-center hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-28 mx-auto"
       >
         Next
       </a>

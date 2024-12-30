@@ -1,6 +1,6 @@
 ---
 import { projectNostr } from "../../../data";
-import NewLayout from "../../../layouts/NewLayout.astro";
+import NewLayout from "../../../layouts/Layout.astro";
 import arrow from "../../../assets/images/arrow.png";
 import arrowLeft from "../../../assets/images/arrow-left.png";
 import ArrowLongg from "../../../assets/icons/ArrowLongg";
@@ -18,65 +18,69 @@ const navigateToNext = () => {
 ---
 
 <NewLayout title="How Angor Works">
-  <div class="flex mt-36 justify-between px-16">
+  <div class="flex flex-col mt-36 justify-between md:px-16">
     <BackButton client:load />
 
-    <div class="mx-auto">
+    <div class="mx-auto mt-7">
       <div class="max-w-3xl w-full">
         <div class="flex items-center justify-between">
           <div class="flex flex-col items-center gap-6">
             <div class="relative">
               <div
-                class="bg-[#83B5C0] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+                class="bg-[#E8A1A1] w-16 h-16 md:w-20 md:h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
               >
                 Sam
               </div>
               <div class="">
                 <p
                   id="text1"
-                  class="absolute left-28 text-[#086C81] top-12 rotate-[15deg] w-[200px]"
+                  class="absolute left-28 text-[#E8A1A1] top-12 rotate-[15deg] w-[200px]"
                 >
                   Invests 5 BTC
                 </p>
-                <div class="absolute rotate-3 left-16 top-8">
-                  <ArrowLongg color="#83B5C0" id="arrow1" width={553} />
+                <div
+                  class="absolute rotate-12 md:rotate-3 left-10 md:left-16 top-4 md:top-8"
+                >
+                  <ArrowLongg color="#E8A1A1" id="arrow1" width={"100%"} />
                   <!-- <LongArrow color="#E8A1A1" id="" /> -->
                 </div>
               </div>
             </div>
             <div class="relative">
               <div
-                class="bg-[#5A9DAB] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+                class="bg-[#E28989] w-16 h-16 md:w-20 md:h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
               >
                 Mia
               </div>
               <div class="">
                 <p
                   id="text2"
-                  class="absolute left-24 text-[#086C81] top-6 rotate-[9deg] w-[200px]"
+                  class="absolute left-20 top-7 md:left-24 text-[#E28989] md:top-6 rotate-[9deg] w-[200px]"
                 >
                   Invests 7 BTC
                 </p>
-                <div class="absolute -rotate-6 left-16 -top-4">
-                  <ArrowLongg color="#5A9DAB" id="arrow2" width={542} />
+                <div
+                  class="absolute -rotate-6 left-14 -top-5 md:left-16 md:-top-4"
+                >
+                  <ArrowLongg color="#E28989" id="arrow2" width={542} />
                 </div>
               </div>
             </div>
             <div class="relative">
               <div
-                class="bg-[#318496] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
+                class="bg-[#DC7272] w-16 h-16 md:w-20 md:h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
               >
                 Max
               </div>
               <div class="">
                 <p
                   id="text3"
-                  class="absolute left-24 text-[#086C81] -top-2 -rotate-2 w-[200px]"
+                  class="absolute left-24 text-[#DC7272] -top-2 -rotate-2 w-[200px]"
                 >
                   Invests 4 BTC
                 </p>
                 <div class="absolute -rotate-[16deg] left-16 -top-16">
-                  <ArrowLongg color="#318496" id="arrow3" width={542} />
+                  <ArrowLongg color="#DC7272" id="arrow3" width={542} />
                 </div>
               </div>
             </div>
@@ -89,11 +93,13 @@ const navigateToNext = () => {
               <div class="">
                 <p
                   id="text4"
-                  class="absolute left-32 -top-2 text-[#022229] -rotate-[15deg] w-full"
+                  class="absolute left-28 -top-5 md:left-32 md:-top-2 text-[#022229] -rotate-[15deg] w-full"
                 >
                   Invests 5 BTC
                 </p>
-                <div class="absolute -rotate-[28deg] left-16 -top-24">
+                <div
+                  class="absolute -rotate-[32deg] md:-rotate-[28deg] left-16 -top-24"
+                >
                   <ArrowLongg color="#022229" id="arrow4" width={570} />
                 </div>
               </div>
@@ -101,7 +107,7 @@ const navigateToNext = () => {
           </div>
           <div
             id="circle1"
-            class="bg-[#086C81] h-36 w-36 scale-0 opacity-0 rounded-full text-white flex items-center justify-center"
+            class="bg-[#9747FF] h-36 w-36 scale-0 opacity-0 rounded-full text-white flex items-center justify-center"
           >
             Bob
           </div>
@@ -116,7 +122,7 @@ const navigateToNext = () => {
       </div>
       <a
         href="/how-angor-works/4"
-        class="w-60 h-14 rounded-md flex justify-center mx-auto hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-20"
+        class="max-w-96 w-full h-14 rounded-md flex justify-center mx-auto hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-20"
       >
         Next
       </a>
@@ -124,6 +130,7 @@ const navigateToNext = () => {
   </div>
   <script>
     import { gsap } from "gsap";
+
     const circle1 = document.getElementById("circle1");
     const arrow1 = document.getElementById("arrow1");
     const arrow2 = document.getElementById("arrow2");
@@ -133,30 +140,68 @@ const navigateToNext = () => {
     const text2 = document.getElementById("text2");
     const text3 = document.getElementById("text3");
     const text4 = document.getElementById("text4");
-    gsap.to(circle1, { scale: 1, duration: 3, opacity: 1 });
-    gsap.to(arrow1, { width: 553, duration: 3 });
-    gsap.to(arrow2, { width: 542, duration: 3, delay: 3 });
-    gsap.to(arrow3, { width: 542, duration: 3, delay: 5 });
-    gsap.to(arrow4, { width: 570, duration: 3, delay: 7 });
-    gsap.fromTo(
-      text1,
-      { opacity: 0, delay: 2, x: -60, duration: 2 },
-      { opacity: 1, delay: 2, x: 0, duration: 2 }
-    );
-    gsap.fromTo(
-      text2,
-      { opacity: 0, delay: 3, x: -60, duration: 2 },
-      { opacity: 1, delay: 3, x: 0, duration: 2 }
-    );
-    gsap.fromTo(
-      text3,
-      { opacity: 0, delay: 6, x: -60, duration: 2 },
-      { opacity: 1, delay: 6, x: 0, duration: 2 }
-    );
-    gsap.fromTo(
-      text4,
-      { opacity: 0, delay: 8, x: -60, duration: 2 },
-      { opacity: 1, delay: 8, x: 0, duration: 2 }
-    );
+
+    // Create a GSAP matchMedia instance
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 768px)", () => {
+      // Desktop Animations
+      gsap.to(circle1, { scale: 1, duration: 3, opacity: 1 });
+      gsap.to(arrow1, { width: 553, duration: 3 });
+      gsap.to(arrow2, { width: 542, duration: 3, delay: 3 });
+      gsap.to(arrow3, { width: 542, duration: 3, delay: 5 });
+      gsap.to(arrow4, { width: 570, duration: 3, delay: 7 });
+
+      gsap.fromTo(
+        text1,
+        { opacity: 0, x: -60 },
+        { opacity: 1, x: 0, delay: 2, duration: 2 }
+      );
+      gsap.fromTo(
+        text2,
+        { opacity: 0, x: -60 },
+        { opacity: 1, x: 0, delay: 3, duration: 2 }
+      );
+      gsap.fromTo(
+        text3,
+        { opacity: 0, x: -60 },
+        { opacity: 1, x: 0, delay: 6, duration: 2 }
+      );
+      gsap.fromTo(
+        text4,
+        { opacity: 0, x: -60 },
+        { opacity: 1, x: 0, delay: 8, duration: 2 }
+      );
+    });
+
+    mm.add("(max-width: 767px)", () => {
+      // Mobile Animations (shorter delays, smaller widths)
+      gsap.to(circle1, { scale: 1, duration: 2, opacity: 1 });
+      gsap.to(arrow1, { width: 300, duration: 2 });
+      gsap.to(arrow2, { width: 300, duration: 2, delay: 2 });
+      gsap.to(arrow3, { width: 300, duration: 2, delay: 4 });
+      gsap.to(arrow4, { width: 320, duration: 2, delay: 6 });
+
+      gsap.fromTo(
+        text1,
+        { opacity: 0, x: -30 },
+        { opacity: 1, x: 0, delay: 1.5, duration: 1.5 }
+      );
+      gsap.fromTo(
+        text2,
+        { opacity: 0, x: -30 },
+        { opacity: 1, x: 0, delay: 2.5, duration: 1.5 }
+      );
+      gsap.fromTo(
+        text3,
+        { opacity: 0, x: -30 },
+        { opacity: 1, x: 0, delay: 4, duration: 1.5 }
+      );
+      gsap.fromTo(
+        text4,
+        { opacity: 0, x: -30 },
+        { opacity: 1, x: 0, delay: 5.5, duration: 1.5 }
+      );
+    });
   </script>
 </NewLayout>

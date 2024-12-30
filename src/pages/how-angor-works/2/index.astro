@@ -1,6 +1,6 @@
 ---
 import { projectNostr } from "../../../data";
-import NewLayout from "../../../layouts/NewLayout.astro";
+import NewLayout from "../../../layouts/Layout.astro";
 import arrow from "../../../assets/images/arrow.png";
 import arrowLeft from "../../../assets/images/arrow-left.png";
 import LongArrow from "../../../assets/icons/LongArrow";
@@ -17,35 +17,35 @@ const navigateToNext = () => {
 ---
 
 <NewLayout title="How Angor Works">
-  <div class="flex mt-36 justify-between px-16">
+  <div class="flex flex-col mt-36">
     <BackButton client:load />
 
-    <div class="mx-auto flex flex-col gap-36">
+    <div class="mx-auto flex flex-col gap-36 w-full">
       <div class="relative">
         <div
           id="circle1"
-          class="bg-[#086C81] scale-0 w-32 h-32 rounded-full relative z-10 flex text-xl justify-center items-center mx-auto"
+          class="bg-[#9747FF] scale-0 w-32 h-32 rounded-full relative z-10 flex text-xl justify-center items-center mx-auto"
         >
           <p class="text-[#FFFFFF] text-xl font-bold">Bob</p>
         </div>
         <div
           style="transform: rotate(130deg);"
-          class="absolute left-20 top-44 mt-2"
+          class="absolute left-5 md:left-20 top-44 mt-2"
         >
-          <LongArrow color={"#022229"} id={"longArrow1"} width={250} />
+          <LongArrow color={"#D8B9FF"} id={"longArrow1"} width={250} />
         </div>
         <div
           style="transform: rotate(50deg);"
-          class="absolute right-20 top-44 mt-2"
+          class="absolute right-5 md:right-20 top-44 mt-2"
         >
-          <LongArrow color={"#022229"} id={"longArrow2"} width={250} />
+          <LongArrow color={"#D8B9FF"} id={"longArrow2"} width={250} />
         </div>
       </div>
       <div
         id="bigBox"
-        class="max-w-2xl h-fit scale-0 pt-4 mt-5 rounded-lg border flex flex-col justify-end border-[#9747FF] bg-[#086C81] px-4"
+        class="max-w-2xl h-fit scale-0 pt-4 mt-5 rounded-lg border flex flex-col justify-end border-[#9747FF] bg-[#F1E7FF] px-4"
       >
-        <p class="text-[#fff] font-bold text-xl text-center">
+        <p class="text-[#1D1D1D] font-bold text-xl text-center">
           Bob publishes the project to Nostr and a commitment to the bitcoin
           network
         </p>
@@ -74,7 +74,9 @@ const navigateToNext = () => {
           {
             projectNostr.map((item, index) => (
               <div class="flex items-center">
-                <div class="bg-[#FAFAFA] py-1 px-3 rounded-md mr-1">{item}</div>
+                <div class="bg-[#FAFAFA] py-1 px-3 rounded-md mr-1 text-[7px]">
+                  {item}
+                </div>
                 <img
                   src={arrow.src}
                   width={27}
@@ -89,7 +91,7 @@ const navigateToNext = () => {
 
       <a
         href="/how-angor-works/3"
-        class="w-60 h-14 rounded-md flex justify-center mx-auto hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold mb-20"
+        class="max-w-96 w-full h-14 rounded-md flex justify-center mx-auto hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold mb-20"
       >
         Next
       </a>

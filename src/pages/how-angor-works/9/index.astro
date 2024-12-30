@@ -1,5 +1,5 @@
 ---
-import NewLayout from "../../../layouts/NewLayout.astro";
+import NewLayout from "../../../layouts/Layout.astro";
 import arrowLeft from "../../../assets/images/arrow-left.png";
 import TextChevronSec from "../../../components/TextChevronSec";
 import LongArrow from "../../../assets/icons/LongArrow";
@@ -7,12 +7,12 @@ import BackButton from "../../../components/BackButton";
 ---
 
 <NewLayout title="How Angor Works">
-  <div class="flex mt-36 justify-between px-16 font-sans">
+  <div class="flex flex-col mt-36 justify-between md:px-16 font-sans">
     <BackButton client:load />
 
     <div class="mx-auto">
       <div class="max-w-5xl w-full">
-        <div class="flex items-center h-28 mb-20">
+        <div class="flex items-start h-28 mb-20 mt-10">
           <!-- <div
                 class="bg-[#E8A1A1] w-20 h-20 rounded-full text-white flex justify-center items-center font-bold text-xs"
               >
@@ -31,11 +31,11 @@ import BackButton from "../../../components/BackButton";
           <div class="flex items-start">
             <div
               id="circle1"
-              class="bg-[#FF4747] scale-0 w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              class="bg-[#FF4747] scale-0 md:w-28 md:h-28 w-16 h-16 rounded-full text-white flex justify-center items-center font-bold text-[10px]"
             >
               Penalty Trx
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col w-2/5 items-center">
               <TextChevronSec
                 color="#FF4747"
                 text={"Published to"}
@@ -47,11 +47,11 @@ import BackButton from "../../../components/BackButton";
           <div class="flex items-start">
             <div
               id="circle2"
-              class="bg-[#FF9900] scale-0 w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+              class="bg-[#FF9900] scale-0 md:w-28 md:h-28 w-16 h-16 rounded-full text-white flex justify-center items-center font-bold text-[10px]"
             >
               Bitcoin Net
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col w-2/5 items-center">
               <TextChevronSec
                 color="#FF9900"
                 text={"Alice Opts Out"}
@@ -63,23 +63,23 @@ import BackButton from "../../../components/BackButton";
 
           <div
             id="circle3"
-            class="bg-[#022229] scale-0 w-28 h-28 rounded-full text-white flex justify-center items-center font-bold text-xs"
+            class="bg-[#022229] scale-0 md:w-28 md:h-28 w-16 h-16 rounded-full text-white flex justify-center items-center font-bold text-[10px]"
           >
             Bitcoin Net
           </div>
         </div>
-        <p class="text-[#1D1D1D] font-semibold text-2xl text-center">
+        <p class="text-[#1D1D1D] font-semibold text-sm md:text-2xl text-center">
           After publishing the penalty transaction to the Bitcoin network, Alice
           exits the project but must wait through the penalty duration to
           reclaim her unspent funds.
         </p>
       </div>
       <a
-      href="/how-angor-works/10"
-      class="w-60 h-14 rounded-md flex justify-center hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-28 mx-auto"
-    >
-      Next
-    </a>
+        href="/how-angor-works/10"
+        class="max-w-96 w-full h-14 rounded-md flex justify-center mx-auto hover:bg-[#086C81] bg-angorPrimary items-center text-[#fff] text-xl font-bold my-28"
+      >
+        Next
+      </a>
     </div>
   </div>
   <script>
