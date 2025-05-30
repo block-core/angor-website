@@ -1,4 +1,4 @@
-import{j as t}from"./jsx-runtime.ClP7wGfN.js";import{c as o}from"./hub.DWS-Y_NL.js";import{C as e}from"./angor._3GEaK26.js";import{m as i}from"./proxy.BUwcT5MC.js";import"./index.DK-fsZOb.js";const n=o({meta:{src:"/_astro/bitcoin.BOw9xNCe.svg",width:351,height:349,format:"svg"},attributes:{width:"351",height:"349",viewBox:"0 0 351 349",fill:"none"},children:`
+import{j as t}from"./jsx-runtime.ClP7wGfN.js";import{c as o}from"./hub.DYGYPxze.js";import{C as e}from"./angor.BEjUqnmC.js";import{m as i}from"./proxy.BUwcT5MC.js";import"./index.DK-fsZOb.js";const n=o({meta:{src:"/_astro/bitcoin.BOw9xNCe.svg",width:351,height:349,format:"svg"},attributes:{width:"351",height:"349",viewBox:"0 0 351 349",fill:"none"},children:`
 <rect width="351" height="349" fill="#022229" />
 <line x1="80.658" y1="2.18557e-08" x2="80.6579" y2="339" stroke="url(#paint0_linear_63_7)" />
 <line x1="128.329" y1="1.99254e-08" x2="128.329" y2="339" stroke="url(#paint1_linear_63_7)" />
