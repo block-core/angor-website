@@ -58,7 +58,7 @@ export const Footer = () => {
                   {/* GitHub Icon with Tooltip */}
                   <div className="relative group">
                     <a
-                      className="inline-block w-10 h-10 p-1 outlined-button"
+                      className="inline-block w-10 h-10 p-2 hover:bg-bgDark2 rounded-lg transition-colors duration-200"
                       href="https://github.com/block-core/angor-hub"
                       aria-label="Github"
                     >
@@ -72,7 +72,7 @@ export const Footer = () => {
                   {/* Nostr Icon with Tooltip */}
                   <div className="relative group">
                     <a
-                      className="inline-block w-10 h-10 p-1 outlined-button"
+                      className="inline-block w-10 h-10 p-2 hover:bg-bgDark2 rounded-lg transition-colors duration-200"
                       href="/nostr"
                       aria-label="Nostr"
                     >
@@ -86,7 +86,7 @@ export const Footer = () => {
                   {/* Second GitHub Icon with Tooltip */}
                   <div className="relative group">
                     <a
-                      className="inline-block w-10 h-10 p-1 outlined-button"
+                      className="inline-block w-10 h-10 p-2 pt-[0.65rem] hover:bg-bgDark2 rounded-lg transition-colors duration-200"
                       href="https://github.com/block-core/angor"
                       aria-label="Github"
                     >
