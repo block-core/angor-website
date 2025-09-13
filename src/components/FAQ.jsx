@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const FAQCategories = [
 	{
 		title: "Getting Started",
-		icon: "🚀",
-		color: "from-secondaryColor to-cyan-600",
+		color: "secondaryColor",
 		questions: [
 			{
 				question: "What is Angor?",
@@ -30,8 +29,7 @@ const FAQCategories = [
 	},
 	{
 		title: "Technology & Security",
-		icon: "🔒",
-		color: "from-primaryColor to-secondaryColor",
+		color: "primaryColor",
 		questions: [
 			{
 				question: "What role does Nostr play?",
@@ -47,8 +45,7 @@ const FAQCategories = [
 	},
 	{
 		title: "For Investors",
-		icon: "💰",
-		color: "from-cyan-700 to-secondaryColor",
+		color: "cyan-600",
 		questions: [
 			{
 				question: "How does Angor benefit investors?",
@@ -84,8 +81,7 @@ const FAQCategories = [
 	},
 	{
 		title: "For Founders",
-		icon: "🎯",
-		color: "from-emerald-600 to-secondaryColor",
+		color: "emerald-600",
 		questions: [
 			{
 				question: "What advantages does Angor offer to founders?",
@@ -106,8 +102,7 @@ const FAQCategories = [
 	},
 	{
 		title: "Platform & Governance",
-		icon: "⚖️",
-		color: "from-bgDark3 to-primaryColor",
+		color: "bgDark3",
 		questions: [
 			{
 				question: "How do you select and vet crowdfunding projects?",
@@ -130,112 +125,154 @@ export const FAQ = () => {
 				viewport={{ once: true }}
 				transition={{ duration: 0.5, delay: 0.2 }}
 			>
-				<div className="relative z-10 container px-2 sm:px-8 lg:px-4 mx-auto w-11/12 sm:w-full">
+				<div className="relative z-10 container px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
 					<div className="max-w-6xl mx-auto">
-						<div className="text-center mb-16">
-							<p className="mb-7 block-subtitle">Have any questions?</p>
-							<h2 className="mb-8 block-big-title">
+						{/* Header Section */}
+						<div className="text-center mb-12 lg:mb-16">
+							<motion.p 
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5 }}
+								className="mb-4 sm:mb-6 block-subtitle"
+							>
+								Have any questions?
+							</motion.p>
+							<motion.h2 
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 0.1 }}
+								className="mb-6 sm:mb-8 block-big-title"
+							>
 								Frequently Asked Questions
-							</h2>
-							<p className="text-secondaryText text-lg max-w-2xl mx-auto">
+							</motion.h2>
+							<motion.p 
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 0.2 }}
+								className="text-secondaryText text-base sm:text-lg max-w-2xl mx-auto leading-relaxed"
+							>
 								Find answers to common questions about Angor's decentralized
 								crowdfunding platform
-							</p>
+							</motion.p>
 						</div>
 
-						{/* Category Navigation */}
-						<div className="flex flex-wrap justify-center gap-3 mb-12">
-							{FAQCategories.map((category, index) => (
-								<button
-									key={category.title}
-									onClick={() => setActiveCategory(index)}
-									className={`
-                    relative px-6 py-3 rounded-xl font-semibold text-sm sm:text-base
-                    transition-all duration-300 hover:scale-105 flex items-center gap-2
-                    ${
-											activeCategory === index
-												? "bg-gradient-to-r " +
-												  category.color +
-												  " text-white shadow-lg shadow-secondaryColor/25"
-												: "bg-bgDark2 text-secondaryText hover:bg-bgDark3 hover:text-primaryText"
-										}
-                  `}
+						{/* Category Navigation - Mobile First Design */}
+						<div className="mb-8 lg:mb-12">
+							{/* Mobile Dropdown */}
+							<div className="block lg:hidden mb-6">
+								<select
+									value={activeCategory}
+									onChange={(e) => setActiveCategory(parseInt(e.target.value))}
+									className="w-full px-4 py-3 bg-bgDark2 border border-mainBorder rounded-xl text-primaryText font-medium focus:outline-none focus:ring-2 focus:ring-secondaryColor focus:border-transparent"
 								>
-									<span className="text-lg">{category.icon}</span>
-									<span className="hidden sm:inline">{category.title}</span>
-									<span className="sm:hidden">
-										{category.title.split(" ")[0]}
-									</span>
-								</button>
-							))}
+									{FAQCategories.map((category, index) => (
+										<option key={category.title} value={index}>
+											{category.title}
+										</option>
+									))}
+								</select>
+							</div>
+
+							{/* Desktop Navigation */}
+							<div className="hidden lg:grid grid-cols-1 xl:grid-cols-5 gap-3">
+								{FAQCategories.map((category, index) => (
+									<motion.button
+										key={category.title}
+										onClick={() => setActiveCategory(index)}
+										whileHover={{ scale: 1.02 }}
+										whileTap={{ scale: 0.98 }}
+										className={`
+											px-4 py-3 rounded-xl font-medium text-sm xl:text-base
+											transition-all duration-300 text-center border
+											${
+												activeCategory === index
+													? "bg-secondaryColor text-white shadow-lg border-transparent"
+													: "bg-bgDark2 text-secondaryText hover:bg-bgDark3 hover:text-primaryText border-mainBorder hover:border-mainBorderLighter"
+											}
+										`}
+									>
+										{category.title}
+									</motion.button>
+								))}
+							</div>
 						</div>
 
 						{/* FAQ Content */}
-						<motion.div
-							key={activeCategory}
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.3 }}
-							className="mb-11"
-						>
-							<div className="mb-8">
-								<h3 className="text-2xl sm:text-3xl font-bold text-primaryText mb-3 flex items-center gap-3">
-									<span className="text-3xl">
-										{FAQCategories[activeCategory].icon}
-									</span>
-									{FAQCategories[activeCategory].title}
-								</h3>
-								<div
-									className={`h-1 w-20 bg-gradient-to-r ${FAQCategories[activeCategory].color} rounded-full`}
-								></div>
-							</div>
-
-							<div className="grid gap-4">
-								{FAQCategories[activeCategory].questions.map((item, index) => (
-									<FAQBox
-										key={`${item.question}-${index}`}
-										title={item.question}
-										content={item.answer}
-										defaultOpen={index === 0}
-										categoryColor={
-											FAQCategories[activeCategory].color
-										}
+						<AnimatePresence mode="wait">
+							<motion.div
+								key={activeCategory}
+								initial={{ opacity: 0, x: 20 }}
+								animate={{ opacity: 1, x: 0 }}
+								exit={{ opacity: 0, x: -20 }}
+								transition={{ duration: 0.3, ease: "easeInOut" }}
+								className="mb-8 lg:mb-12"
+							>
+								{/* Category Header */}
+								<div className="mb-6 lg:mb-8">
+									<motion.div
+										initial={{ opacity: 0, y: 10 }}
+										animate={{ opacity: 1, y: 0 }}
+										transition={{ duration: 0.3, delay: 0.1 }}
+										className="mb-4"
+									>
+										<h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primaryText">
+											{FAQCategories[activeCategory].title}
+										</h3>
+									</motion.div>
+									<motion.div
+										initial={{ width: 0 }}
+										animate={{ width: "4rem" }}
+										transition={{ duration: 0.4, delay: 0.2 }}
+										className="h-1 bg-secondaryColor rounded-full"
 									/>
-								))}
-							</div>
-						</motion.div>
+								</div>
+
+								{/* Questions Grid */}
+								<div className="space-y-3 sm:space-y-4">
+									{FAQCategories[activeCategory].questions.map((item, index) => (
+										<motion.div
+											key={`${item.question}-${index}`}
+											initial={{ opacity: 0, y: 20 }}
+											animate={{ opacity: 1, y: 0 }}
+											transition={{ duration: 0.3, delay: index * 0.1 }}
+										>
+											<FAQBox
+												title={item.question}
+												content={item.answer}
+												defaultOpen={index === 0}
+												categoryColor={FAQCategories[activeCategory].color}
+												index={index}
+											/>
+										</motion.div>
+									))}
+								</div>
+							</motion.div>
+						</AnimatePresence>
 
 						{/* Contact Section */}
 						<motion.div
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1 }}
+							initial={{ opacity: 0, y: 30 }}
+							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							transition={{ duration: 0.5, delay: 0.4 }}
-							className="text-center bg-gradient-to-r from-bgDark2 to-bgDark3 rounded-2xl p-8 border border-mainBorder"
+							transition={{ duration: 0.5, delay: 0.2 }}
+							className="text-center"
 						>
-							<h3 className="text-xl font-bold text-primaryText mb-4">
+							<h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primaryText mb-6">
 								Still have questions?
 							</h3>
-							<p className="text-secondaryText mb-6 max-w-md mx-auto">
-								Join our community on Nostr or check out our documentation for
-								more detailed information.
-							</p>
-							<div className="flex flex-col sm:flex-row gap-4 justify-center">
-								<a
-									href="/nostr"
-									className="px-6 py-3 bg-gradient-to-r from-secondaryColor to-cyan-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-secondaryColor/25 transition-all duration-300 hover:scale-105"
-								>
-									Join Nostr Community
-								</a>
-								<a
-									href="https://docs.angor.io"
-									target="_blank"
-									rel="noopener noreferrer"
-									className="px-6 py-3 bg-bgDark3 text-primaryText font-semibold rounded-xl border border-mainBorder hover:bg-bgDark3Hover transition-all duration-300 hover:scale-105"
-								>
-									View Documentation
-								</a>
-							</div>
+							<motion.a
+								href="https://docs.angor.io"
+								target="_blank"
+								rel="noopener noreferrer"
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+								className="inline-block px-8 py-3 bg-secondaryColor text-white font-medium rounded-lg hover:shadow-lg transition-all duration-300"
+							>
+								Read Documentation
+							</motion.a>
 						</motion.div>
 					</div>
 				</div>
@@ -244,51 +281,42 @@ export const FAQ = () => {
 	);
 };
 
-const FAQBox = ({ defaultOpen, title, content, categoryColor }) => {
+const FAQBox = ({ defaultOpen, title, content, categoryColor, index }) => {
 	const [isOpen, setIsOpen] = useState(defaultOpen);
 
 	return (
 		<motion.div
 			initial={{ opacity: 0, y: 10 }}
 			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.3 }}
-			className="group"
+			transition={{ duration: 0.3, delay: index * 0.05 }}
 		>
 			<div
 				className={`
-          pt-6 pb-6 px-6 rounded-2xl bg-bgDark2 border border-mainBorderDarker mb-4 
-          relative hover:bg-bgDark3 cursor-pointer transition-all duration-300
-          hover:border-mainBorder hover:shadow-lg hover:shadow-black/20
-          ${isOpen ? "ring-2 ring-secondaryColor/30 bg-bgDark3" : ""}
-        `}
+					p-4 sm:p-5 lg:p-6 rounded-xl bg-bgDark2 border border-mainBorderDarker
+					cursor-pointer transition-all duration-300 hover:bg-bgDark3 
+					hover:border-mainBorder hover:shadow-lg
+					${isOpen ? "ring-2 ring-secondaryColor/30 bg-bgDark3 shadow-lg border-mainBorder" : ""}
+				`}
 				onClick={() => setIsOpen(!isOpen)}
 			>
-				<div className="flex justify-between items-start">
-					<div className="flex-1 pr-8">
-						<h3 className="content-title mb-2 group-hover:text-secondaryText transition-colors duration-300">
+				{/* Question Header */}
+				<div className="flex justify-between items-center gap-4">
+					<div className="flex-1 min-w-0">
+						<h4 className="text-base sm:text-lg font-semibold text-primaryText group-hover:text-primaryText/90 transition-colors duration-300 leading-relaxed">
 							{title}
-						</h3>
-						<div
-							className={`
-                text-secondaryText leading-relaxed transition-all duration-300 overflow-hidden
-                ${isOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"}
-              `}
-						>
-							{content}
-						</div>
+						</h4>
 					</div>
 
+					{/* Expand/Collapse Button */}
 					<div className="flex-shrink-0">
-						<div
-							className={`
-              w-8 h-8 rounded-full bg-gradient-to-r ${categoryColor} 
-              flex items-center justify-center transition-transform duration-300
-              ${isOpen ? "rotate-180" : "rotate-0"}
-            `}
+						<motion.div
+							animate={{ rotate: isOpen ? 180 : 0 }}
+							transition={{ duration: 0.3, ease: "easeInOut" }}
+							className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-secondaryColor flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300"
 						>
 							<svg
-								width="16"
-								height="16"
+								width="14"
+								height="14"
 								viewBox="0 0 20 20"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
@@ -302,19 +330,35 @@ const FAQBox = ({ defaultOpen, title, content, categoryColor }) => {
 									strokeLinejoin="round"
 								/>
 							</svg>
-						</div>
+						</motion.div>
 					</div>
 				</div>
 
-				{/* Progress bar for open state */}
-				{isOpen && (
-					<motion.div
-						initial={{ width: 0 }}
-						animate={{ width: "100%" }}
-						transition={{ duration: 0.3, delay: 0.1 }}
-						className={`h-0.5 bg-gradient-to-r ${categoryColor} mt-4 rounded-full`}
-					/>
-				)}
+				{/* Answer Content */}
+				<AnimatePresence>
+					{isOpen && (
+						<motion.div
+							initial={{ height: 0, opacity: 0 }}
+							animate={{ height: "auto", opacity: 1 }}
+							exit={{ height: 0, opacity: 0 }}
+							transition={{ duration: 0.3, ease: "easeInOut" }}
+							className="overflow-hidden"
+						>
+							<motion.div
+								initial={{ y: -10 }}
+								animate={{ y: 0 }}
+								exit={{ y: -10 }}
+								transition={{ duration: 0.3, ease: "easeInOut" }}
+								className="pt-4"
+							>
+								{/* Answer Text */}
+								<div className="text-secondaryText text-sm sm:text-base leading-relaxed">
+									{content}
+								</div>
+							</motion.div>
+						</motion.div>
+					)}
+				</AnimatePresence>
 			</div>
 		</motion.div>
 	);
